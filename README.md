@@ -2,7 +2,7 @@
 
 # **2016**
 
-### *Date: 2-25 (四)*
+### *Date: 2 - 25 (四)*
 
 #### Plan:
 
@@ -22,7 +22,7 @@
 
 - 阅读了一些关于 [js 内存泄漏](http://www.ibm.com/developerworks/cn/web/wa-jsmemory) 的相关知识
 
-### *Date: 2-26 (五)*
+### *Date: 2 - 26 (五)*
 
 #### Plan:
 
