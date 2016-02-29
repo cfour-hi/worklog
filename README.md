@@ -16,7 +16,7 @@
 
 - 下午调试大转盘指针在指向抽奖结果那格区域的随机摆动角度，并没有与后端调试接口数据，后端还是一片混乱，各种报错，无法调试状态。
 
-- [大转盘抽奖 Demo](http://monine.github.com/study/lottery_dzp.html)
+- <a href="http://monine.github.io/study/public/lottery_dzp.html">大转盘抽奖 Demo</a>
 
 ### *Date: 2 - 26 (五)*
 
