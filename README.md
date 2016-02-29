@@ -12,11 +12,11 @@
   
 #### Mark:
 
-- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 [小像素问题](http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/){:target="_blank"}。
+- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 <a href="http://taobaofed.org/blog/2015/11/04/mobile-rem-problem">小像素问题</a>
 
 - 下午调试大转盘指针在指向抽奖结果那格区域的随机摆动角度，并没有与后端调试接口数据，后端还是一片混乱，各种报错，无法调试状态。
 
-- [大转盘抽奖](http://monine.github.io/study/public/lottery_dzp.html){:target="_blank"}
+- <a href="http://monine.github.io/study/public/lottery_dzp.html" target="_blank">大转盘抽奖</a>
 
 ### *Date: 2 - 26 (五)*
 
@@ -46,8 +46,8 @@
 
 - 因为版本发布加班到凌晨 12 点
 
-- 军哥介绍了一个替代 [f5](http://getf5.com/) 的前端开发工具 [Puer](http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend)
+- 军哥介绍了一个替代 <a href="http://getf5.com" target="_blank">f5</a> 的前端开发工具 <a href="http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend" target="_blank">Puer</a>
 
   `> Puer 是一个可以实时编辑刷新的前端服务器`
 
-- 阅读了一些关于 [js 内存泄漏](http://www.ibm.com/developerworks/cn/web/wa-jsmemory) 的相关知识
+- 阅读了一些关于 <a href="http://www.ibm.com/developerworks/cn/web/wa-jsmemory" target="_blank">js 内存泄漏</a> 的相关知识
