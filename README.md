@@ -12,11 +12,11 @@
   
 #### Mark:
 
-- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 [小像素问题](http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/)。
+- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 [小像素问题](http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/){:target="_blank"}。
 
 - 下午调试大转盘指针在指向抽奖结果那格区域的随机摆动角度，并没有与后端调试接口数据，后端还是一片混乱，各种报错，无法调试状态。
 
-- <a href="http://monine.github.io/study/public/lottery_dzp.html">大转盘抽奖 Demo</a>
+- [大转盘抽奖](http://monine.github.io/study/public/lottery_dzp.html){:target="_blank"}
 
 ### *Date: 2 - 26 (五)*
 
