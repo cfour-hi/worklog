@@ -10,7 +10,7 @@
 
 #### Mark:
 
-- 早晨阅读时间读到 <a href="http://www.alloyteam.com" title="腾讯全端 AlloyTeam 团队 Blog">AlloyTeam</a> 一篇文章 <a href="http://www.alloyteam.com/2015/04/talk-about-the-front-end-engineering-career-planning" target="_blank" title="谈前端工程师的职业规划"><谈前端工程师的职业规划></a>
+- 早晨阅读时间读到 <a href="http://www.alloyteam.com" target="_blank" title="腾讯全端 AlloyTeam 团队 Blog">AlloyTeam</a> 一篇文章 <a href="http://www.alloyteam.com/2015/04/talk-about-the-front-end-engineering-career-planning" target="_blank" title="谈前端工程师的职业规划"><谈前端工程师的职业规划></a>
 
   > “一专多长” 才是前端工程师的终极目标
 
@@ -20,7 +20,7 @@
 
   一专已是难得，多长更是宝贵！
 
-- 上午开了一上午的需求评审会议，其他正常需求都 OK，然而我们准备启动的新项目 (商城) 最终讨论未果，还需斟酌。
+- 上午开了一上午的需求评审会议，其他正常需求都 OK，然而我们准备启动的新项目 (商城) 最终讨论未果，还需细细琢磨。
 
 - 下午用 `css` 实现圆形的时候遇到一个小难关 o_o
 
@@ -46,7 +46,7 @@
   
 - 下午有重新整理编辑页面抽奖功能的代码，做了一系列优化与封装等，由草版变为正式版。
 
-- 军哥中午跟我说咱 70c 的 H5 制作平台就交给我来负责了，然后有新人来也交给我带，嗯..好吧，没问题。
+- 军哥中午跟我说咱 70c 的 H5 制作平台就交给我来负责了，然后有新人来也交给我带，嗯... OK，没问题。
 
 ### *Date: 2 - 29 (一)*
 
