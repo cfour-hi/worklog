@@ -2,6 +2,18 @@
 
 # **2016**
 
+### *Date: 3 - 2 (三)*
+
+#### Plan:
+
+#### Mark:
+
+- 早晨阅读时间读到 <a href="http://www.alloyteam.com" title="腾讯全端 AlloyTeam 团队 Blog">AlloyTeam</a> 一篇文章 <a href="http://www.alloyteam.com/2015/04/talk-about-the-front-end-engineering-career-planning" target="_blank" title="谈前端工程师的职业规划"><谈前端工程师的职业规划></a>
+
+  `“一专多长才是前端工程师的终极目标”` 不仅是前端，大部分领域都应该是这样。
+
+  `“一专是指你不可替代，多长标示你可以替代别人”` 一专已是难得，多长更是宝贵！
+
 ### *Date: 3 - 1 (二)*
 
 #### Plan:
