@@ -26,7 +26,7 @@
 
 #### Mark:
 
-- 早晨阅读时间读到 <a href="http://www.alloyteam.com/" target="_blank" title="腾讯全端 AlloyTeam 团队 Blog">AlloyTeam</a> 一篇文章 <a href="http://www.alloyteam.com/2015/04/talk-about-the-front-end-engineering-career-planning/" target="_blank" title="谈前端工程师的职业规划"><谈前端工程师的职业规划></a>
+- 早晨阅读时间读到 <a href="http://www.alloyteam.com/" target="_blank" title="腾讯全端 AlloyTeam 团队 Blog">AlloyTeam</a> 一篇文章 <a href="http://www.alloyteam.com/2015/04/talk-about-the-front-end-engineering-career-planning/" target="_blank" title="谈前端工程师的职业规划">谈前端工程师的职业规划</a>
 
   > “一专多长” 才是前端工程师的终极目标
 
