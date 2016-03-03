@@ -6,9 +6,17 @@
 
 #### Plan:
 
-- 今天务必走完抽奖功能流程并提交测试！
+- 今天务必走完抽奖功能流程！
 
   > 没做完就加班！ T-T
+
+#### Mark:
+
+- 抽奖功能流程终于走完了 T_T
+
+- 晚上看了 <a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭</a> 大神一篇关于 SVG 动画的文章 (超叼的感觉)
+
+  <a href="http://www.zhangxinxu.com/wordpress/2014/08/so-powerful-svg-smil-animation/" target="_blank" title="超级强大的SVG SMIL animation动画详解">超级强大的SVG SMIL animation动画详解</a>
 
 ### *Date: 3 - 2 (三)*
 
@@ -18,7 +26,7 @@
 
 #### Mark:
 
-- 早晨阅读时间读到 <a href="http://www.alloyteam.com" target="_blank" title="腾讯全端 AlloyTeam 团队 Blog">AlloyTeam</a> 一篇文章 <a href="http://www.alloyteam.com/2015/04/talk-about-the-front-end-engineering-career-planning" target="_blank" title="谈前端工程师的职业规划"><谈前端工程师的职业规划></a>
+- 早晨阅读时间读到 <a href="http://www.alloyteam.com/" target="_blank" title="腾讯全端 AlloyTeam 团队 Blog">AlloyTeam</a> 一篇文章 <a href="http://www.alloyteam.com/2015/04/talk-about-the-front-end-engineering-career-planning/" target="_blank" title="谈前端工程师的职业规划"><谈前端工程师的职业规划></a>
 
   > “一专多长” 才是前端工程师的终极目标
 
@@ -34,7 +42,7 @@
 
   因为要做手机适配，在百分比值宽高不相等的容器内，如何实现一个相对父容器大小比例固定的圆形？
 
-  一个基础却又容易混淆的css知识点：<a href="https://segmentfault.com/a/1190000004231995" target="_blank" title="巧用margin/padding的百分比值实现高度自适应">巧用margin/padding的百分比值实现高度自适应（多用于占位，避免闪烁）</a>
+  一个基础却又容易混淆的css知识点：<a href="https://segmentfault.com/a/1190000004231995/" target="_blank" title="巧用margin/padding的百分比值实现高度自适应">巧用margin/padding的百分比值实现高度自适应（多用于占位，避免闪烁）</a>
 
 ### *Date: 3 - 1 (二)*
 
@@ -66,11 +74,11 @@
   
 #### Mark:
 
-- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 <a href="http://taobaofed.org/blog/2015/11/04/mobile-rem-problem" target="_blank">小像素问题</a>。
+- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 <a href="http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/" target="_blank" title="rem 产生的小数像素问题">小像素问题</a>。
 
 - 下午调试大转盘指针在指向抽奖结果那格区域的随机摆动角度，并没有与后端调试接口数据，后端还是一片混乱，各种报错，无法调试状态。
 
-- <a href="http://monine.github.io/study/public/lottery_dzp.html" target="_blank">大转盘抽奖 Demo</a>
+- <a href="http://monine.github.io/study/public/lottery_dzp.html/" target="_blank" title="大转盘抽奖">大转盘抽奖 Demo</a>
 
 ### *Date: 2 - 26 (五)*
 
@@ -98,7 +106,7 @@
 
 - 因为版本发布加班到凌晨 12 点
 
-- 军哥介绍了一个替代 <a href="http://getf5.com" target="_blank">f5</a> 的前端开发工具 <a href="http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend" target="_blank">Puer</a>
+- 军哥介绍了一个替代 <a href="http://getf5.com/" target="_blank" title="f5">f5</a> 的前端开发工具 <a href="http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/" target="_blank" title="Puer">Puer</a>
 
   > Puer 是一个可以实时编辑刷新的前端服务器
 
