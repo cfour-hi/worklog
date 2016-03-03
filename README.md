@@ -18,7 +18,7 @@
 
   <a href="http://www.zhangxinxu.com/wordpress/2014/08/so-powerful-svg-smil-animation/" target="_blank" title="超级强大的SVG SMIL animation动画详解">超级强大的SVG SMIL animation动画详解</a>
 
-- 推荐俺军哥写的一篇关于前端这个职业发展规划文章 <a href="https://github.com/f2e-journey/f2e-journey/blob/master/career-planning.md/" target="_blank" title="前端工程师的职业发展规划">前端工程师的职业发展规划</a>
+- 推荐俺军哥写的一篇关于前端这个职业发展规划的文章 <a href="https://github.com/f2e-journey/f2e-journey/blob/master/career-planning.md/" target="_blank" title="前端工程师的职业发展规划">前端工程师的职业发展规划</a>
 
 ### *Date: 3 - 2 (三)*
 
