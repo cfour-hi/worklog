@@ -14,6 +14,10 @@
 
   今天解决方案是在当前奖品名称输入框失去焦点 `blur()` 的时候再去判断字符的长度，如果超出长度则进行错误处理机制。
 
+- <a href="https://github.com/Monine/study/issues/1" target="_blank" title="UTF-8 编码标准下获取字符串中字符的字节长度">UTF-8 编码标准下获取字符串中字符的字节长度</a>
+
+- 晚上还特意看了一篇关于 <a href="http://www.regexlab.com/zh/encoding.htm" target="_blank" title="字符、字节和编码">字符、字节和编码</a> 的文章
+
 ### *Date: 3 - 3 (四)*
 
 #### Plan:
