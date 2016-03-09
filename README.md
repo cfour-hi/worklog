@@ -9,8 +9,13 @@
 - 抽奖功能 debug
 
   1. 奖品数量负值检测修改
+  2. 加入缓存机制
 
 - 电商平台页面框架搭建
+
+  <a href="https://github.com/appbone/mobile-spa-boilerplate/blob/master/directory.md" target="_blank" title="网站项目目录结构规范">网站项目目录结构规范</a>
+
+  1. 商品管理页面搭建完成
 
 ### *Date: 3 - 8 (二)*
 
