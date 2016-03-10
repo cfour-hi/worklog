@@ -2,6 +2,29 @@
 
 # **2016**
 
+### *Date: 3 - 10 (四)*
+
+#### Plan:
+
+- 抽奖功能缓存机制完善
+
+  1. 加入缓存机制后，抽奖功能无法在后端抽奖结果数据返回之前执行预抽奖操作
+  2. 目前只是简单粗暴的使用 `alert` 提示用户已经抽过奖和没有抽奖机会了
+
+- 开始 H5 红包功能区域投放前端实现
+
+  1. 计划与红包广告功能区域投放使用相同实现机制
+
+#### Mark:
+
+- 加班 18:30 ~ 22:00 (3.5h)
+
+- 把 `stady` 仓库 `Issues` 内的部分与工作相关的内容移动到这个仓库的 `Issues` 内
+
+- > 红包广告功能在开发\测试环境切换的时候需要手动更改接口的域名值，需要一个实现自动修改可行方案。 (3 - 8)
+
+  1. 今天想到一个方案就是在打开预览页面调用 `GetDomain` 接口时后端返回红包和抽奖功能在对应环境下的接口域名地址，目前 `GetDomain`           接口只返回了二维码相关的一些配置数据，所以可以充分利用。
+
 ### *Date: 3 - 9 (三)*
 
 #### Plan:
@@ -12,10 +35,20 @@
   2. 加入缓存机制
 
 - 电商平台页面框架搭建
+  
+  1. [网站项目目录结构规范] [16-3-9-1]
 
-  <a href="https://github.com/appbone/mobile-spa-boilerplate/blob/master/directory.md" target="_blank" title="网站项目目录结构规范">网站项目目录结构规范</a>
+  [16-3-9-1]: https://github.com/appbone/mobile-spa-boilerplate/blob/master/directory.md
+  '网站项目目录结构规范'
 
-  1. 商品管理页面搭建完成
+  2. 商品管理页面搭建完成
+
+#### Mark:
+
+- 晚上在 [慕课网] [16-3-9-2] 把 `Bootstrap` 教程复习了一遍
+
+  [16-3-9-2]: http://www.imooc.com/
+  '慕课网'
 
 ### *Date: 3 - 8 (二)*
 
@@ -25,7 +58,11 @@
 
 - H5 红包添加匿名抽奖功能
 
+  1. 用户打开场景的时候弹出微信授权确认页面，获取用户的头像、昵称、性别、头像、地址、 `OpenID` 、 `UnionID` 等信息。
+
 - 添加摇一摇抽奖功能
+
+  1. 15 号 `v5.5.0` 版本发布之后再正式开始实现融入目前的大转盘和九宫格抽奖
 
 #### Mark:
 
@@ -35,11 +72,12 @@
 
   下午工作状态非常差 #_#
 
-- <a href="http://www.cnblogs.com/xxcanghai/p/5205998.html" target="_blank" title="2016十家公司前端面试小记">2016十家公司前端面试小记</a>
+- [2016十家公司前端面试小记] [16-3-8-1]
 
-  晚上看到的文章，感受就是面试题目的内容都明白一二，但要我回答可能表述不清，不能深入。
+  [16-3-8-1]: http://www.cnblogs.com/xxcanghai/p/5205998.html
+  '2016十家公司前端面试小记'
 
-  一定找个时间把这里面题目全部详细解答一遍！！！
+  1. 晚上看到的文章，感受就是面试题的内容都明白一二，但要我回答可能就表述不清，无法深入。一定找个时间把里面题目全部详细解答一遍！！！
 
 ### *Date: 3 - 7 (一)*
 
@@ -59,23 +97,32 @@
 
 #### Plan:
 
-- 抽奖功能今天开始细节调优、解决 bug
+- 抽奖功能今天开始细节调优、 `debug`
 
 #### Mark:
 
-- 关于 编辑页面抽奖功能奖品设置的奖品名称字符长度限制需要一个可行方案 (3-1)
+- > 关于 编辑页面抽奖功能奖品设置的奖品名称字符长度限制需要一个可行方案 (3 - 1)
 
-  目前的解决方案是在当前奖品名称输入框失去焦点 `blur()` 的时候再去判断字符的长度，如果超出长度则触发错误处理机制。
+  1. 目前的解决方案是在当前奖品名称输入框失去焦点 `blur()` 的时候再去判断字符的长度，如果超出长度则触发错误处理机制。
 
 - 好想吐槽咱后端目前的混乱状态，尼玛获取代码后编译各种报错。
 
   无法调取接口获得数据，尼玛只能各种造假数据来调试代码，盲写代码有木有！
 
-- <a href="https://github.com/Monine/study/issues/1" target="_blank" title="UTF-8 编码标准下获取字符串中字符的字节长度">UTF-8 编码标准下获取字符串中字符的字节长度</a>
+- [编码标准下获取字符串中字符的字节长度] [16-3-4-1]
 
-  晚上还特意看了一篇关于 <a href="http://www.regexlab.com/zh/encoding.htm" target="_blank" title="字符、字节和编码">字符、字节和编码</a> 的文章
+  [16-3-4-1]: https://github.com/Monine/Worklogs/issues/1
+  '编码标准下获取字符串中字符的字节长度'
 
-- <a href="https://github.com/Monine/study/issues/2" target="_blank" title="常用的正则表达式">常用的正则表达式</a>
+  晚上还特意看了一篇关于 [字符、字节和编码] [16-3-4-2] 的文章
+
+  [16-3-4-2]: http://www.regexlab.com/zh/encoding.htm
+  '字符、字节和编码'
+
+- [常用的正则表达式] [16-3-4-3]
+
+  [16-3-4-3]: https://github.com/Monine/study/issues/2
+  '常用的正则表达式'
 
 ### *Date: 3 - 3 (四)*
 
@@ -83,17 +130,24 @@
 
 - 今天务必走完抽奖功能流程！
 
-  > 没做完就加班！ T-T
+  1. 没做完就加班！ T-T
 
 #### Mark:
 
 - 抽奖功能流程终于走完了 T_T
 
-- 晚上看了 <a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭</a> 大神一篇关于 SVG 动画的文章 (超叼的感觉)
+- 晚上看了 [张鑫旭] [16-3-3-1] 大神一篇关于 SVG 动画的文章 [超级强大的SVG SMIL animation动画详解] [16-3-3-2]
 
-  <a href="http://www.zhangxinxu.com/wordpress/2014/08/so-powerful-svg-smil-animation/" target="_blank" title="超级强大的SVG SMIL animation动画详解">超级强大的SVG SMIL animation动画详解</a>
+  [16-3-3-1]: http://www.zhangxinxu.com
+  '张鑫旭'
 
-- 推荐俺军哥写的一篇关于前端这个职业发展规划的文章 <a href="https://github.com/f2e-journey/f2e-journey/blob/master/career-planning.md/" target="_blank" title="前端工程师的职业发展规划">前端工程师的职业发展规划</a>
+  [16-3-3-2]: http://www.zhangxinxu.com/wordpress/2014/08/so-powerful-svg-smil-animation/
+  '超级强大的SVG SMIL animation动画详解'
+
+- 俺军哥写了一篇关于前端职业发展规划的文章 [前端工程师的职业发展规划] [16-3-3-3]
+
+  [16-3-3-3]: https://github.com/f2e-journey/f2e-journey/blob/master/career-planning.md/
+  '前端工程师的职业发展规划'
 
 ### *Date: 3 - 2 (三)*
 
