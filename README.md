@@ -8,6 +8,9 @@
 
 - H5 红包区域选择前端实现
 
+  1. 已经实现区域选择和移除
+  2. 移除后返回到可选区域原本的排序位置
+
 #### Mark:
 
 - [跨站攻击 - CRSF] [16-3-11-1]
@@ -218,11 +221,17 @@
   
 #### Mark:
 
-- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 <a href="http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/" target="_blank" title="rem 产生的小数像素问题">小像素问题</a>。
+- 上午调试大转盘抽奖发现百分比控制的元素大小或距离会有小数上的偏差，类似于 `rem` 产生的 [小像素问题] [16-2-29-1]
+
+  [16-2-29-1]: http://taobaofed.org/blog/2015/11/04/mobile-rem-problem
+  'rem 产生的小数像素问题'
 
 - 下午调试大转盘指针在指向抽奖结果那格区域的随机摆动角度，并没有与后端调试接口数据，后端还是一片混乱，各种报错，无法调试状态。
 
-- <a href="http://monine.github.io/study/public/lottery_dzp.html/" target="_blank" title="大转盘抽奖">大转盘抽奖 Demo</a>
+- [大转盘抽奖 Demo] [16-2-29-2]
+
+  [16-2-29-2]: http://monine.github.io/study/public/lottery_dzp.html
+  '大转盘抽奖 Demo'
 
 ### *Date: 2 - 26 (五)*
 
@@ -230,7 +239,7 @@
 
 - 预览页面大转盘抽奖功能
 
-  实现用户点击抽奖按钮之后调用接口，在接口获得抽奖结果数据之前大转盘保持转动，直到接口返回抽奖结果数据之后再停止转动，并且保证大转盘转动流畅自然。
+  1. 实现用户点击抽奖按钮之后调用接口，在接口获得抽奖结果数据之前大转盘保持转动，直到接口返回抽奖结果数据之后再停止转动，并且保证大转盘转动流畅自然。
 
 #### Mark:
 
@@ -242,7 +251,7 @@
 
 - 抽奖功能完善 
 
-  根据后端接口数据调整 JS 代码
+  1. 根据后端接口数据调整 JS 代码
   
 - 5.4.0 版本发布
 
@@ -250,8 +259,14 @@
 
 - 因为版本发布加班到凌晨 12 点
 
-- 军哥介绍了一个替代 <a href="http://getf5.com/" target="_blank" title="f5">f5</a> 的前端开发工具 <a href="http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/" target="_blank" title="Puer">Puer</a>
+- 军哥介绍了一个替代 [f5] [16-2-25-1] 的前端开发工具  [Puer] [16-2-25-2]
+
+  [16-2-25-1]: http://getf5.com
+  [16-2-25-2]: http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend
 
   > Puer 是一个可以实时编辑刷新的前端服务器
 
-- 阅读了一些关于 <a href="http://www.ibm.com/developerworks/cn/web/wa-jsmemory" target="_blank">js 内存泄漏</a> 的相关知识
+- 阅读了一些关于 [js 内存泄漏] [16-2-25-3] 的相关知识
+
+  [16-2-25-3]: http://www.ibm.com/developerworks/cn/web/wa-jsmemory
+  'js 内存泄漏'
