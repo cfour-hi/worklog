@@ -22,7 +22,12 @@
   [16-3-14-1]: https://github.com/Monine/study/issues/6
   '关于 Javascript 的一些知识点'
 
-- 
+- `css` 有个属性叫 `pointer-event` 值可以阻止 **鼠标事件**
+
+  - [CSS3 pointer-events:none应用举例及扩展 (张鑫旭)] [16-3-14-2]
+
+  [16-3-14-2]: http://www.zhangxinxu.com/wordpress/2011/12/css3-pointer-events-none-javascript
+  'CSS3 pointer-events:none应用举例及扩展'
 
 ### *Date: 3 - 11 (五)*
 
