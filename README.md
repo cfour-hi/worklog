@@ -14,9 +14,9 @@
 
 #### Mark:
 
-- get 到 AngularUI '$modal' 技能
+- get 到 AngularUI `$modal` 技能
 
-  - 'resolve' 可以传入 `promise` 对象
+  - `resolve` 可以传入 `promise` 对象
 
 ### *Data: 4 - 6 (三)*
 
