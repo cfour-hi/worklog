@@ -12,7 +12,7 @@
 
 - 智云前端小伙伴 [学前班、学前端 [第 2 期]] [16-4-8-1]
 
-  [16-4-1-1]:https://github.com/f2e-journey/xueqianban/issues/3
+  [16-4-8-1]:https://github.com/f2e-journey/xueqianban/issues/3
   '智云前端小伙伴 - 学前班、学前端 [第 3 期]' 
 
 ### *Date: 4 - 7 (四)*
