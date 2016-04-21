@@ -2,6 +2,18 @@
 
 # **2016**
 
+### *Date: 4 - 20 (四)*
+
+#### Plan:
+
+- 
+
+### *Date: 4 - 20 (三)*
+
+#### Mark:
+
+- 调休~
+
 ### *Date: 4 - 19 (二)*
 
 #### Plan:
@@ -25,6 +37,20 @@
   - 更改显示样式
   - 更新初始化数据
   - 调试时间段功能
+
+#### Mark:
+
+- [顶级程序员的10条最佳时间][16-4-18-1]
+
+  [16-4-18-1]:http://note.youdao.com/yws/public/redirect/share?id=0d65aecbfa020472e2823d7f4056f108&type=false
+  '顶级程序员的10条最佳时间'
+
+- [免费服务器 Suger][16-4-18-2]
+
+  [16-4-18-2]:http://surge.sh/
+  '免费服务器 Suger'
+
+- `table` 多行 `rowspan` 多列 `colspan`
 
 ### *Date: 4 - 15 (五)*
 
@@ -50,11 +76,20 @@
 
 - 编辑页面 商品功能模块搭建
 
+#### Mark:
+
+- [Airbnb Javascript Stype Guide][16-4-14-1]
+
+  [16-4-14-1]:https://github.com/sivan/javascript-style-guide/blob/master/es5/README.md
+  'Airbnb Javascript 规范指南'
+
 ### *Date: 4 - 13 (三)*
 
 #### Mark:
 
-- 有点小烧，调休一天~
+- 有点小烧，调休~
+
+- 学了一些 Vue.js
 
 ### *Date: 4 - 12 (二)*
 
