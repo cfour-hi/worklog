@@ -1,8 +1,6 @@
 Tools
 ---
-[Puer](http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/)
-
-一个可以实时编辑刷新的前端服务器
+[Puer](http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/): 一个可以实时编辑刷新的前端服务器
 
 IDE中 `Ctrl + s` 页面就刷新了
 
