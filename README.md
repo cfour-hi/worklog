@@ -2,13 +2,12 @@ Tools
 ---
 [Puer](http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/): 一个可以实时编辑刷新的前端服务器
 
-IDE中 `Ctrl + s` 页面就刷新了
+> IDE中 `Ctrl + s` 保存文件页面就刷新了
 
-install: npm install puer -g
+- npm install puer -g
 
-90%的使用场景
+- 90%的使用场景
 > cd /path/to/workspace ↵
-
 > puer ↵
 
 
