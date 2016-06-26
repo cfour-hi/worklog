@@ -1,14 +1,18 @@
 Tools
 ---
-[Puer](http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/): 一个可以实时编辑刷新的前端服务器
+1. [Puer](http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/) 一个可以实时编辑刷新的前端服务器
 
-IDE中 `Ctrl + s` 保存文件，页面立即同步刷新
+  IDE中 `Ctrl + s` 保存文件，页面立即同步刷新。
 
-- npm install puer -g
-- 90%的使用场景
-> cd /path/to/workspace ↵
+  #### Install
 
-> puer ↵
+  npm install puer -g
+  
+  #### Use
+  
+  > cd /path/to/workspace
+  
+  > puer`
 
 
 工作日志
