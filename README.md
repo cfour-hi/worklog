@@ -10,7 +10,7 @@ Develop Tools
 
   on the bleeding edge of the web
   
-  Chrome 金丝雀，其实就冲着它土豪金的外表觉着特有B格。
+  Chrome 金丝雀，其实就冲着它土豪金的外表觉着特有 B 格。
 
 - [Sublime Text](https://www.sublimetext.com/)
 
@@ -55,7 +55,7 @@ Develop Tools
   
   还可以用来模拟/修改请求，我用来干过坏事h-h
   
-  [Fiddler使用简介](http://note.youdao.com/yws/public/redirect/share?id=61022f8971604bd58f0ddcf3df070ced&type=false)
+  [Fiddler 使用简介](http://note.youdao.com/yws/public/redirect/share?id=61022f8971604bd58f0ddcf3df070ced&type=false)
   
 - [Rosin](http://alloyteam.github.io/Rosin/)
 
@@ -63,9 +63,15 @@ Develop Tools
   
   Fiddler 的好基友，主要用来查看控制台输出信息。(移动端)
   
-- [微信web开发者工具](https://mp.weixin.qq.com/wiki/10/e5f772f4521da17fa0d7304f68b97d7e.html)
+- [微信 web 开发者工具](https://mp.weixin.qq.com/wiki/10/e5f772f4521da17fa0d7304f68b97d7e.html)
 
   主要用来开发需要微信授权的页面，可以拿到微信用户信息进行调试。
+  
+- [SVGO](http://note.youdao.com/yws/public/redirect/share?id=61022f8971604bd58f0ddcf3df070ced&type=false)
+
+  SVG Optimizer is a Nodejs-based tool for optimizing SVG vector graphics files. 
+  
+  SVG 精简压缩，删除无用信息。
 
 工作日志
 ---
