@@ -10,7 +10,7 @@ Develop Tools
 
   on the bleeding edge of the web
   
-  Chrome金丝雀，其实就冲着它金黄的外表特有B格。
+  Chrome金丝雀，其实就冲着它土豪金的外表觉着特有B格。
 
 - [Sublime](https://www.sublimetext.com/)
 
