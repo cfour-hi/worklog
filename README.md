@@ -4,7 +4,7 @@ Develop Tools
 
   a fast, free web browser
   
-  V8引擎 - 你值得拥有！
+  V8引擎，你值得拥有~
   
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
 
