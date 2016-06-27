@@ -4,25 +4,25 @@ Develop Tools
 
   a fast, free web browser
   
-  V8引擎，你值得拥有~
+  V8 引擎，你值得拥有~
   
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
 
   on the bleeding edge of the web
   
-  Chrome金丝雀，其实就冲着它土豪金的外表觉着特有B格。
+  Chrome 金丝雀，其实就冲着它土豪金的外表觉着特有B格。
 
-- [Sublime](https://www.sublimetext.com/)
+- [Sublime Text](https://www.sublimetext.com/)
 
   a sophisticated text editor for code, markup and prose
   
-  唯一会用的Code Editor
+  唯一会用的 Code Editor
 
 - [Package Control](https://packagecontrol.io/)
 
   the Sublime Text package manager
   
-  没有它，sublime text只是个半成品。
+  没有它，Sublime Text 只是半成品。
   
   - Emmet
   - HTML5
@@ -32,12 +32,20 @@ Develop Tools
   - SublimeLinter
   - Seti_UI
   - Base 16 Color Schemes
+
+- [Git for windows](https://git-for-windows.github.io/)
+
+  [Git 教程 - 廖雪峰](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+
+- [Node.js](https://nodejs.org/en/) [Node.js 中文](http://nodejs.cn/)
+
+  Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。
   
 - [Puer](http://leeluolee.github.io/2014/10/24/use-puer-helpus-developer-frontend/)
 
   一个可以实时编辑刷新的前端服务器
   
-  Code Editor中 `Ctrl + s` 保存文件，页面立即同步刷新。
+  Code Editor 中 `Ctrl + s` 保存文件，页面立即同步刷新。
   
 - [Fiddler](http://www.telerik.com/fiddler)
 
@@ -53,7 +61,11 @@ Develop Tools
 
   A tool for web developers debug mobile page with fiddler
   
-  fiddler的好基友，主要用来查看控制台输出信息。(移动端)
+  Fiddler 的好基友，主要用来查看控制台输出信息。(移动端)
+  
+- [微信web开发者工具](https://mp.weixin.qq.com/wiki/10/e5f772f4521da17fa0d7304f68b97d7e.html)
+
+  主要用来开发需要微信授权的页面，可以拿到微信用户信息进行调试。
 
 工作日志
 ---
