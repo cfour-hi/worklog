@@ -53,7 +53,7 @@ Develop Tools
   
   与后端接口打交道，经常要用来截包查看数据。(主要针对移动端)
   
-  还可以用来模拟/修改请求，我用来干过坏事h-h
+  还可以用来模拟/修改请求，我用来干过坏事 h-h
   
   [Fiddler 使用简介](http://note.youdao.com/yws/public/redirect/share?id=61022f8971604bd58f0ddcf3df070ced&type=false)
   
@@ -72,6 +72,12 @@ Develop Tools
   SVG Optimizer is a Nodejs-based tool for optimizing SVG vector graphics files. 
   
   SVG 精简压缩，删除无用信息。
+
+- [Beyond Compare](http://www.scootersoftware.com/index.php)
+
+  Beyond Compare is focused.  Beyond Compare allows you to quickly and easily compare your files and folders.  By using simple, powerful commands you can focus on the differences you're interested in and ignore those you're not.  You can then merge the changes, synchronize your files, and generate reports for your records.
+  
+  代码对比工具，我只会九牛一毛 e-e
 
 工作日志
 ---
