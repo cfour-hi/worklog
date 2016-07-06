@@ -93,4 +93,4 @@ Develop Tools
 [16-4]:https://github.com/Monine/worklog/issues/2
 [16-5]:https://github.com/Monine/worklog/issues/3
 [16-6]:https://github.com/Monine/worklog/issues/4
-[16-6]:https://github.com/Monine/worklog/issues/5
+[16-7]:https://github.com/Monine/worklog/issues/5
