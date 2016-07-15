@@ -30,8 +30,12 @@ Develop Tools
   - Alignment
   - BracketHighlighter
   - SublimeLinter
+  - SublimeCodeIntel
   - Seti_UI
+    - "theme": "Seti.sublime-theme"
+    - "highlight_line": true
   - Base 16 Color Schemes
+    - "color_scheme": "Packages/User/SublimeLinter/base16-eighties (SL).tmTheme"
 
 - [Git for windows](https://git-for-windows.github.io/)
 
