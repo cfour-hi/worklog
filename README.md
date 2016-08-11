@@ -71,7 +71,7 @@ Develop Tools
 
   主要用来开发需要微信授权的页面，可以拿到微信用户信息进行调试。
   
-- [SVGO](http://note.youdao.com/yws/public/redirect/share?id=61022f8971604bd58f0ddcf3df070ced&type=false)
+- [SVGO](https://github.com/svg/svgo)
 
   SVG Optimizer is a Nodejs-based tool for optimizing SVG vector graphics files. 
   
