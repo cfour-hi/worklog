@@ -88,13 +88,9 @@ Develop Tools
 > 一份点点滴滴的工作流水账
 
 ### 2016
-- [7月份][16-7]
-- [6月份][16-6]
-- [5月份][16-5]
-- [4月份][16-4]
-- [3月份][16-3]
-[16-3]:https://github.com/Monine/worklog/issues/1
-[16-4]:https://github.com/Monine/worklog/issues/2
-[16-5]:https://github.com/Monine/worklog/issues/3
-[16-6]:https://github.com/Monine/worklog/issues/4
-[16-7]:https://github.com/Monine/worklog/issues/5
+- [8月份](https://github.com/Monine/worklog/issues/6)
+- [7月份](https://github.com/Monine/worklog/issues/5)
+- [6月份](https://github.com/Monine/worklog/issues/4)
+- [5月份](https://github.com/Monine/worklog/issues/3)
+- [4月份](https://github.com/Monine/worklog/issues/2)
+- [3月份](https://github.com/Monine/worklog/issues/1)
