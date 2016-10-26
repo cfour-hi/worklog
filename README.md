@@ -31,11 +31,6 @@ Develop Tools
   - BracketHighlighter
   - SublimeLinter
   - SublimeCodeIntel
-  - Seti_UI
-    - "theme": "Seti.sublime-theme"
-    - "highlight_line": true
-  - Base 16 Color Schemes
-    - "color_scheme": "Packages/User/SublimeLinter/base16-eighties (SL).tmTheme"
 
 - [Git for windows](https://git-for-windows.github.io/)
 
@@ -76,12 +71,13 @@ Develop Tools
   SVG Optimizer is a Nodejs-based tool for optimizing SVG vector graphics files. 
   
   SVG 精简压缩，删除无用信息。
-
-- [Beyond Compare](http://www.scootersoftware.com/index.php)
-
-  Beyond Compare is focused.  Beyond Compare allows you to quickly and easily compare your files and folders.  By using simple, powerful commands you can focus on the differences you're interested in and ignore those you're not.  You can then merge the changes, synchronize your files, and generate reports for your records.
   
-  代码对比工具，我只会九牛一毛 e-e
+- [devtool](https://github.com/Jam3/devtool)
+
+  Runs Node.js programs inside Chrome DevTools
+  
+  在 chrome 开发者工具内调试 node.js 程序
+
 
 工作日志
 ---
