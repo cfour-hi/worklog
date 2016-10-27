@@ -1,14 +1,12 @@
 Develop Tools
 ---
 - [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
-
-  a fast, free web browser
+> a fast, free web browser
   
   V8 引擎，你值得拥有~
   
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-
-  on the bleeding edge of the web
+> on the bleeding edge of the web
   
   Chrome 金丝雀，其实就冲着它土豪金的外表觉着特有 B 格。
 
