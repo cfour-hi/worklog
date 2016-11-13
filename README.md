@@ -1,14 +1,19 @@
 Develop Tools
 ---
+
+
+
 - [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
 > a fast, free web browser
   
   V8 引擎，你值得拥有~
   
+  
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
 > on the bleeding edge of the web
   
   Chrome 金丝雀，其实就冲着它土豪金的外表觉着特有 B 格。
+  
 
 - [Sublime Text](https://www.sublimetext.com/)
 > a sophisticated text editor for code, markup and prose
@@ -19,14 +24,6 @@ Develop Tools
 > the Sublime Text package manager
   
   没有它，Sublime Text 只是半成品。
-  
-  - Emmet
-  - HTML5
-  - jQuery
-  - Alignment
-  - BracketHighlighter
-  - SublimeLinter
-  - SublimeCodeIntel
 
 - [Git for windows](https://git-for-windows.github.io/)
 
