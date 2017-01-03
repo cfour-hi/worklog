@@ -1,16 +1,21 @@
-Material:
 {
 	"always_show_minimap_viewport": true,
-	"bold_folder_labels": true,
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+	"draw_minimap_border": true,
 	"draw_white_space": "all",
-	"enable_tab_scrolling": false,
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
 	"font_options":
 	[
 		"gray_antialias",
 		"subpixel_antialias"
 	],
 	"font_size": 12,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"indent_guide_options":
 	[
 		"draw_normal",
@@ -18,19 +23,10 @@ Material:
 	],
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
-	"material_theme_bold_tab": true,
-	"material_theme_bright_scrollbars": true,
-	"material_theme_compact_panel": true,
-	"material_theme_compact_sidebar": true,
-	"material_theme_contrast_mode": true,
-	"material_theme_panel_separator": true,
-	"material_theme_small_statusbar": true,
-	"material_theme_small_tab": true,
-	"material_theme_tabs_autowidth": true,
-	"material_theme_tree_headings": true,
-	"overlay_scroll_bars": "enabled",
+	"save_on_focus_lost": true,
 	"tab_size": 2,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
 }
