@@ -19,7 +19,7 @@
     this.speed = options.speed || 10;
 
     // 抛物线运动完成后的回调
-    this.onMotionDone = options.onMotionDone || constructorFunc;
+    if (options.onMotionDone) this.onMotionDone = options.onMotionDone
 
     // 决定 a 值的大小
     this.curvature = options.curvature || 1;
@@ -83,12 +83,10 @@
       if (x > self.x2) {
         requestAnimationFrame(parabola2target);
       } else {
-        self.onMotionDone();
+        if (self.onMotionDone) self.onMotionDone();
       }
     }
   }
-
-  var constructorFunc = function() {};
 
   window.Parabola = Parabola;
 
