@@ -1,23 +1,21 @@
-// 使用时建议添加 https://github.com/darius/requestAnimationFrame/blob/master/requestAnimationFrame.js
-
-;(function tractor() {
+!(function tractor() {
 
   var TOUCHING = 'touching';
   var TRACTOR_LESS = 'tractor-less';
   var TRACTOR_GREATER = 'tractor-greater';
   var REFRESHING = 'refreshing';
 
-  var Tractor = function(options) {
+  var constructorFunc = function () { };
+
+  var Tractor = function (options) {
     // 下拉容器偏移值
     this.translate = 0;
 
     // 是否已经触发滚动加载状态
     this.scrollerLoading = false;
 
-    var self = this;
-
     var defaults = {
-      scroller: $('body'), // 滚动容器
+      scroller: 'body', // 滚动容器
       openDragLoading: true, // 开启下拉加载
       openScrollLoading: true, // 开启滚动加载
       dragValve: 40, // 下拉加载阀值
@@ -29,44 +27,35 @@
       onScroll2Valve: constructorFunc // 滚动到阀值
     }
 
-    var tractor = self.tractor = $.extend({}, defaults, options || {});
+    this.tractor = extend(defaults, options || {});
+    this.tractor.scroller = document.querySelector(this.tractor.scroller);
 
-    // 是否已经触发下拉条件
-    var isTouchStart = false;
+    this.initDrag();
+    this.initScroll();
+  };
 
-    // 是否已经开始下拉
-    var isDragStart = false;
+  Tractor.prototype.initDrag = function (defaults, options) {
+    var self = this;
+    var tractor = this.tractor;
+    var isTouchStart = false; // 是否已经触发下拉条件
+    var isDragStart = false; // 是否已经开始下拉
 
     // 容器滚动尺寸
-    var scrollerScrollHeight = tractor.scroller[0].scrollHeight;
-    var scrollerHeight = tractor.scroller.height();
-    var scrollerTop = tractor.scroller.scrollTop();
-
-    // tractor.scroller.height(scrollerHeight += tractor.dragValve);
+    var scrollerScrollHeight = tractor.scroller.scrollHeight;
+    var scrollerHeight = tractor.scroller.getBoundingClientRect().height;
 
     // 下拉方向，touchstart 时的点坐标
     var startX, startY;
 
-    // tractor.scroller.css('overflow', 'auto');
-
     // 监听下拉加载
     if (tractor.openDragLoading) {
-      tractor.scroller.on({
-        touchstart: touchStart,
-        touchmove: touchMove,
-        touchend: touchEnd
-      });
-    }
-
-    // 监听滚动加载
-    if (tractor.openScrollLoading) {
-      tractor.scroller.on({
-        scroll: scrolling
-      });
+      tractor.scroller.addEventListener('touchstart', touchStart, false);
+      tractor.scroller.addEventListener('touchmove', touchMove, false);
+      tractor.scroller.addEventListener('touchend', touchEnd, false);
     }
 
     function touchStart(event) {
-      if (tractor.scroller.scrollTop() <= 0) {
+      if (tractor.scroller.scrollTop <= 0) {
         isTouchStart = true;
         startX = event.changedTouches[0].pageX;
         startY = event.changedTouches[0].pageY;
@@ -83,8 +72,10 @@
       if (distance > 0) {
         self.translate = Math.pow(event.changedTouches[0].pageY - startY, 0.85);
       } else {
-        self.translate = 0;
-        tractor.scroller.transform('translate3d(0, ' + self.translate + 'px, 0)');
+        if (self.translate !== 0) {
+          self.translate = 0;
+          elTransform(tractor.scroller, 'translate3d(0, ' + self.translate + 'px, 0)');
+        }
       }
 
       // 避免横向滑屏
@@ -94,27 +85,30 @@
       if (distance > 0) {
         event.preventDefault();
 
-        // tractor.scroller.addClass(TOUCHING).css('overflow', 'hidden');
-        tractor.scroller.addClass(TOUCHING);
+        tractor.scroller.classList.add(TOUCHING);
 
         if (!isDragStart) {
           isDragStart = true;
+
+          // hock
           tractor.onDragStart();
         }
 
         if (self.translate <= tractor.dragValve) {
-          if (tractor.scroller.hasClass(TRACTOR_GREATER)) tractor.scroller.removeClass(TRACTOR_GREATER);
-          if (!tractor.scroller.hasClass(TRACTOR_LESS)) tractor.scroller.addClass(TRACTOR_LESS);
+          if (tractor.scroller.classList.contains(TRACTOR_GREATER)) { tractor.scroller.classList.remove(TRACTOR_GREATER); }
+          if (!tractor.scroller.classList.contains(TRACTOR_LESS)) { tractor.scroller.classList.add(TRACTOR_LESS); }
 
+          // hock
           tractor.onDragLessValve();
         } else {
-          if (tractor.scroller.hasClass(TRACTOR_LESS)) tractor.scroller.removeClass(TRACTOR_LESS);
-          if (!tractor.scroller.hasClass(TRACTOR_GREATER)) tractor.scroller.addClass(TRACTOR_GREATER);
+          if (tractor.scroller.classList.contains(TRACTOR_LESS)) tractor.scroller.classList.remove(TRACTOR_LESS);
+          if (!tractor.scroller.classList.contains(TRACTOR_GREATER)) tractor.scroller.classList.add(TRACTOR_GREATER);
 
+          // hock
           tractor.onDragGreaterValve();
         }
 
-        tractor.scroller.transform('translate3d(0, ' + self.translate + 'px, 0)');
+        elTransform(tractor.scroller, 'translate3d(0, ' + self.translate + 'px, 0)');
       }
     }
 
@@ -123,35 +117,48 @@
 
       if (!isTouchStart) return;
 
-      // tractor.scroller.removeClass(TOUCHING).css('overflow', 'auto');
-      tractor.scroller.removeClass(TOUCHING);
+      tractor.scroller.classList.remove(TOUCHING);
+
       if (self.translate <= tractor.dragValve) {
-        tractor.scroller.removeClass(TRACTOR_LESS)
+        tractor.scroller.classList.remove(TRACTOR_LESS);
         self.translateScroller(300, 0);
       } else {
-        tractor.scroller.removeClass(TRACTOR_GREATER);
-        tractor.scroller.addClass(REFRESHING);
+        tractor.scroller.classList.remove(TRACTOR_GREATER);
+        tractor.scroller.classList.add(REFRESHING);
+
         self.translateScroller(100, tractor.dragValve);
+
+        // hock
         tractor.onDragDone();
       }
     }
+  };
+
+  Tractor.prototype.initScroll = function () {
+    var self = this;
+    var tractor = this.tractor;
+
+    // 监听滚动加载
+    if (tractor.openScrollLoading) { tractor.scroller.addEventListener('scroll', scrolling, false); }
 
     function scrolling() {
       if (self.scrollerLoading) return;
 
-      scrollerscrollHeight = tractor.scroller[0].scrollHeight;
-      scrollerHeight = tractor.scroller.height();
-      scrollerTop = tractor.scroller.scrollTop();
+      scrollerscrollHeight = tractor.scroller.scrollHeight;
+      scrollerHeight = tractor.scroller.getBoundingClientRect().height;
+      scrollerTop = tractor.scroller.scrollTop;
 
       // 达到滚动加载阀值
       if (scrollerscrollHeight - scrollerHeight - scrollerTop <= tractor.scrollValve) {
         self.scrollerLoading = true;
+
+        // hock
         tractor.onScroll2Valve();
       }
     }
   };
 
-  Tractor.prototype.translateScroller = function(consuming, valve) {
+  Tractor.prototype.translateScroller = function (consuming, valve) {
     var self = this;
 
     requestAnimationFrame(translateRAF);
@@ -162,30 +169,32 @@
       var remain = self.translate - self.translate * (timestamp - time) / consuming;
       if (remain < valve) remain = self.translate = valve;
 
-      self.tractor.scroller.transform('translate3d(0, ' + remain + 'px, 0)');
+      elTransform(self.tractor.scroller, 'translate3d(0, ' + remain + 'px, 0)');
 
       if (remain > valve) requestAnimationFrame(translateRAF);
     }
   };
 
-  Tractor.prototype.dragLoadingDone = function() {
-    this.tractor.scroller.removeClass(REFRESHING);
+  Tractor.prototype.dragLoadingDone = function () {
+    this.tractor.scroller.classList.remove(REFRESHING);
     this.translateScroller(300, 0);
   };
 
-  Tractor.prototype.scrollLoadingDone = function() {
+  Tractor.prototype.scrollLoadingDone = function () {
     this.scrollerLoading = false;
   };
 
-  $.fn.transform = function(transform) {
-    for (var i = this.length - 1; i >= 0; i--) {
-      var elStyle = this[i].style;
-      elStyle.webkitTransform = elStyle.MozTransform = elStyle.transform = transform;
-    }
-    return this;
-  };
+  function extend(to, from) {
+    Object.keys(from).forEach(function (key) {
+      to[key] = from[key];
+    });
+    return to;
+  }
 
-  var constructorFunc = function() {};
+  function elTransform(el, transform) {
+    var elStyle = el.style;
+    elStyle.webkitTransform = elStyle.MozTransform = elStyle.transform = transform;
+  };
 
   window.Tractor = Tractor;
 

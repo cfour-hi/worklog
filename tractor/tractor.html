@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Tractor</title>
@@ -9,48 +10,50 @@
       padding: 0;
       margin: 0;
     }
-    html, body {
+
+    html,
+    body {
       height: 100%;
     }
+
     body {
-      overflow: hidden;
       background-color: #eee;
     }
+
     .scroller {
-      position: relative;
       overflow: scroll;
-      height: 100%;
+      position: absolute;
+      top: -40px; bottom: 0;
+      width: 100%;
       line-height: 1;
-      /*background-color: #fff;*/
       -webkit-overflow-scrolling: touch;
     }
+
     .scroller-content {
-      overflow: visible;
-      position: relative;
       height: 100%;
     }
+
     .drop-down-refresh-layer {
-      position: absolute;
-      top: 0;
-      /* top: -40px; */
-      width: 100%; height: 40px;
-      font-size: 12px; line-height: 40px;
+      width: 100%;
+      font-size: 12px;
+      line-height: 40px;
       text-align: center;
       background-color: #eee;
     }
-    .content {
-      /* padding-top: 40px; */
-    }
+
     .content p {
       padding-bottom: 10px;
     }
+
     .scroll-loading {
       height: 40px;
-      font-size: 12px; line-height: 40px;
+      font-size: 12px;
+      line-height: 40px;
       text-align: center;
     }
   </style>
 </head>
+
 <body>
   <div class="scroller">
     <div class="drop-down-refresh-layer">
@@ -65,38 +68,45 @@
   <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.js"></script>
   <script src="./tractor.js"></script>
   <script>
-    (function() {
+    (function () {
       var XLJZ = '下拉加载';
       var SKJZ = '松开加载';
       var $dropDownRefreshText = $('.drop-down-refresh-text');
       var dropDownRefreshText = XLJZ;
+
       var tractor = new Tractor({
-        scroller: $('.scroller'),
-        onDragStart: function() { console.log('start'); },
-        onDragLessValve: function() {
+        scroller: '.scroller',
+        onDragStart: function () { console.log('onDragStart'); },
+        onDragLessValve: function () {
+          console.log('onDragLessValve');
           if (dropDownRefreshText !== XLJZ) $dropDownRefreshText.text(dropDownRefreshText = XLJZ);
         },
-        onDragGreaterValve: function() {
+        onDragGreaterValve: function () {
+          console.log('onDragGreaterValve');
           if ($dropDownRefreshText.text() !== SKJZ) $dropDownRefreshText.text(dropDownRefreshText = SKJZ);
         },
-        onDragDone: function() {
+        onDragDone: function () {
+          console.log('onDragDone');
           $dropDownRefreshText.text('加载中...');
           // 模拟接口耗时
-          setTimeout(function() {
+          setTimeout(function () {
             insertDom();
             tractor.dragLoadingDone();
             $dropDownRefreshText.text(dropDownRefreshText = XLJZ);
           }, 1000);
         },
-        onScroll2Valve: function() {
+        onScroll2Valve: function () {
+          console.log('onScroll2Valve');
           // 模拟接口耗时
-          setTimeout(function() {
+          setTimeout(function () {
             appendDom();
             tractor.scrollLoadingDone();
           }, 1000);
         }
       });
+
       insertDom();
+
       function insertDom() {
         var backgroundColor = Math.random().toString(16).slice(2, 8);
         for (var i = 0; i < 33; i++) {
@@ -112,4 +122,5 @@
     })();
   </script>
 </body>
+
 </html>
