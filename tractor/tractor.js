@@ -101,8 +101,8 @@
           // hock
           tractor.onDragLessValve();
         } else {
-          if (tractor.scroller.classList.contains(TRACTOR_LESS)) tractor.scroller.classList.remove(TRACTOR_LESS);
-          if (!tractor.scroller.classList.contains(TRACTOR_GREATER)) tractor.scroller.classList.add(TRACTOR_GREATER);
+          if (tractor.scroller.classList.contains(TRACTOR_LESS)) { tractor.scroller.classList.remove(TRACTOR_LESS); }
+          if (!tractor.scroller.classList.contains(TRACTOR_GREATER)) { tractor.scroller.classList.add(TRACTOR_GREATER); }
 
           // hock
           tractor.onDragGreaterValve();
