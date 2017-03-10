@@ -1,9 +1,9 @@
 !(function tractor() {
 
-  var TOUCHING = 'touching';
+  var TRACTOR_TOUCHING = 'tractor-touching';
   var TRACTOR_LESS = 'tractor-less';
   var TRACTOR_GREATER = 'tractor-greater';
-  var REFRESHING = 'refreshing';
+  var TRACTOR_REFRESHING = 'tractor-refreshing';
 
   var constructorFunc = function () { };
 
@@ -66,7 +66,7 @@
       // Tips:
       // return false 会阻止默认事件
 
-      if (!isTouchStart) return;
+      if (!isTouchStart) { return; }
 
       var distance = event.changedTouches[0].pageY - startY;
       if (distance > 0) {
@@ -85,7 +85,7 @@
       if (distance > 0) {
         event.preventDefault();
 
-        tractor.scroller.classList.add(TOUCHING);
+        tractor.scroller.classList.add(TRACTOR_TOUCHING);
 
         if (!isDragStart) {
           isDragStart = true;
@@ -115,16 +115,16 @@
     function touchEnd(event) {
       isDragStart = false;
 
-      if (!isTouchStart) return;
+      if (!isTouchStart) { return; }
 
-      tractor.scroller.classList.remove(TOUCHING);
+      tractor.scroller.classList.remove(TRACTOR_TOUCHING);
 
       if (self.translate <= tractor.dragValve) {
         tractor.scroller.classList.remove(TRACTOR_LESS);
         self.translateScroller(300, 0);
       } else {
         tractor.scroller.classList.remove(TRACTOR_GREATER);
-        tractor.scroller.classList.add(REFRESHING);
+        tractor.scroller.classList.add(TRACTOR_REFRESHING);
 
         self.translateScroller(100, tractor.dragValve);
 
@@ -142,7 +142,7 @@
     if (tractor.openScrollLoading) { tractor.scroller.addEventListener('scroll', scrolling, false); }
 
     function scrolling() {
-      if (self.scrollerLoading) return;
+      if (self.scrollerLoading) { return; }
 
       scrollerscrollHeight = tractor.scroller.scrollHeight;
       scrollerHeight = tractor.scroller.getBoundingClientRect().height;
@@ -176,7 +176,7 @@
   };
 
   Tractor.prototype.dragLoadingDone = function () {
-    this.tractor.scroller.classList.remove(REFRESHING);
+    this.tractor.scroller.classList.remove(TRACTOR_REFRESHING);
     this.translateScroller(300, 0);
   };
 
