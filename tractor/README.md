@@ -30,7 +30,7 @@
 
 滚动时只会添加一个 hock：当滚动到阈值时触发 onScroll2Valve hock。
 
-*以上 className 都会在适当的时候移除*
+Tips: *以上 className 都会在适当的时候移除*
 
 **注意：**
 1. 下拉加载（刷新）完成之后请务必调用 Tractor 原型上的 dragLoadingDone 方法，表示此次下拉结束。
