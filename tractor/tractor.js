@@ -30,31 +30,27 @@
     this.tractor = extend(defaults, options || {});
     this.tractor.scroller = document.querySelector(this.tractor.scroller);
 
-    this.initDrag();
-    this.initScroll();
+    if (this.tractor.openDragLoading) { this.initDrag(); }
+    if (this.tractor.openScrollLoading) { this.initScroll(); }
   };
 
-  Tractor.prototype.initDrag = function (defaults, options) {
+  Tractor.prototype.initDrag = function () {
     var self = this;
     var tractor = this.tractor;
     var isTouchStart = false; // 是否已经触发下拉条件
     var isDragStart = false; // 是否已经开始下拉
+    var valveState = false; // 是否下拉到阈值，用来触发 hock 的标识
 
-    // 容器滚动尺寸
-    var scrollerScrollHeight = tractor.scroller.scrollHeight;
-    var scrollerHeight = tractor.scroller.getBoundingClientRect().height;
-
-    // 下拉方向，touchstart 时的点坐标
+    // 下拉 touchstart 时的点坐标
     var startX, startY;
 
-    // 监听下拉加载
-    if (tractor.openDragLoading) {
-      tractor.scroller.addEventListener('touchstart', touchStart, false);
-      tractor.scroller.addEventListener('touchmove', touchMove, false);
-      tractor.scroller.addEventListener('touchend', touchEnd, false);
-    }
+    // 监听下拉
+    tractor.scroller.addEventListener('touchstart', touchStart, false);
+    tractor.scroller.addEventListener('touchmove', touchMove, false);
+    tractor.scroller.addEventListener('touchend', touchEnd, false);
 
     function touchStart(event) {
+      // 只有当容器视图处于最顶部的时候才能触发下拉事件
       if (tractor.scroller.scrollTop <= 0) {
         isTouchStart = true;
         startX = event.changedTouches[0].pageX;
@@ -68,10 +64,13 @@
 
       if (!isTouchStart) { return; }
 
+      // 手指在屏幕移动的距离
       var distance = event.changedTouches[0].pageY - startY;
       if (distance > 0) {
+        // 下拉时容器偏移的距离
         self.translate = Math.pow(event.changedTouches[0].pageY - startY, 0.85);
       } else {
+        // 为了避免多次给元素设置样式属性
         if (self.translate !== 0) {
           self.translate = 0;
           elTransform(tractor.scroller, 'translate3d(0, ' + self.translate + 'px, 0)');
@@ -87,6 +86,7 @@
 
         tractor.scroller.classList.add(TRACTOR_TOUCHING);
 
+        // 触发下拉开始 hock
         if (!isDragStart) {
           isDragStart = true;
 
@@ -95,17 +95,27 @@
         }
 
         if (self.translate <= tractor.dragValve) {
+          // 容器偏移值未达到下拉加载（刷新）阈值
+
           if (tractor.scroller.classList.contains(TRACTOR_GREATER)) { tractor.scroller.classList.remove(TRACTOR_GREATER); }
           if (!tractor.scroller.classList.contains(TRACTOR_LESS)) { tractor.scroller.classList.add(TRACTOR_LESS); }
 
-          // hock
-          tractor.onDragLessValve();
+          // 触发下拉未达到阈值状态 hock
+          if (!valveState) {
+            valveState = !valveState;
+            tractor.onDragLessValve();
+          }
         } else {
+          // 容器偏移值已达到下拉加载（刷新）阈值
+
           if (tractor.scroller.classList.contains(TRACTOR_LESS)) { tractor.scroller.classList.remove(TRACTOR_LESS); }
           if (!tractor.scroller.classList.contains(TRACTOR_GREATER)) { tractor.scroller.classList.add(TRACTOR_GREATER); }
 
-          // hock
-          tractor.onDragGreaterValve();
+          // 触发下拉已达到阈值状态 hock
+          if (valveState) {
+            valveState = !valveState;
+            tractor.onDragGreaterValve();
+          }
         }
 
         elTransform(tractor.scroller, 'translate3d(0, ' + self.translate + 'px, 0)');
@@ -113,9 +123,11 @@
     }
 
     function touchEnd(event) {
-      isDragStart = false;
-
       if (!isTouchStart) { return; }
+
+      // 下拉结束还原状态
+      isDragStart = false;
+      isTouchStart = false;
 
       tractor.scroller.classList.remove(TRACTOR_TOUCHING);
 
@@ -125,10 +137,9 @@
       } else {
         tractor.scroller.classList.remove(TRACTOR_GREATER);
         tractor.scroller.classList.add(TRACTOR_REFRESHING);
-
         self.translateScroller(100, tractor.dragValve);
 
-        // hock
+        // 触发下拉加载（刷新）完成 hock
         tractor.onDragDone();
       }
     }
@@ -138,18 +149,19 @@
     var self = this;
     var tractor = this.tractor;
 
-    // 监听滚动加载
-    if (tractor.openScrollLoading) { tractor.scroller.addEventListener('scroll', scrolling, false); }
+    // 监听滚动
+    tractor.scroller.addEventListener('scroll', scrolling, false);
 
     function scrolling() {
       if (self.scrollerLoading) { return; }
 
-      scrollerscrollHeight = tractor.scroller.scrollHeight;
-      scrollerHeight = tractor.scroller.getBoundingClientRect().height;
-      scrollerTop = tractor.scroller.scrollTop;
+      var scrollerscrollHeight = tractor.scroller.scrollHeight;
+      var scrollerHeight = tractor.scroller.getBoundingClientRect().height;
+      var scrollerTop = tractor.scroller.scrollTop;
+      var scrollValve = scrollerscrollHeight - scrollerHeight - scrollerTop;
 
       // 达到滚动加载阀值
-      if (scrollerscrollHeight - scrollerHeight - scrollerTop <= tractor.scrollValve) {
+      if (scrollValve <= tractor.scrollValve) {
         self.scrollerLoading = true;
 
         // hock
