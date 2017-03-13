@@ -38,7 +38,7 @@
 1. 下拉加载（刷新）完成之后请务必调用 Tractor 原型上的 dragLoadingDone 方法，表示此次下拉结束。
 2. 滚动加载完成之后请务必调用 Tractor 原型上的 scrollLoadingDone 方法，表示此次滚动结束。
 
-最后，上 [Demo](https://cdn.rawgit.com/Monine/worklog/432d9a2a/tractor/tractor.html) 和参数介绍：
+最后，上 [Demo](https://monine.github.io/worklog/tractor/tractor.html) 和参数介绍：
 
 |  参数(Argument)  |  类型(Type)  |  描述(Describe)  |  默认(Default)  |
 |   :--:  |  :--:  |  :--:  |  :--:  |

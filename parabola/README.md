@@ -58,7 +58,7 @@ this.c = t1 - this.b * this.x1;
 
 动画使用 `requestAnimationFrame` 方法完成，目前 [兼容绝大部分浏览器](http://caniuse.com/#feat=requestanimationframe)，不过如果对兼容性有很高的要求那么推荐添加 [Polyfill](https://github.com/darius/requestAnimationFrame)。
 
-最后，上 [Demo](https://cdn.rawgit.com/Monine/worklog/e4a2df75/parabola/parabola.html) 和参数介绍：
+最后，上 [Demo](http://monine.github.io/worklog/parabola/parabola.html) 和参数介绍：
 
 |  参数(Arguments)  |  类型(Type)  |  必要(Necessity)  |  描述(Describe)  |  默认(Default)  |
 |   :--:  |  :--:  |  :--:  |  :--:  |  :--:  |
@@ -69,4 +69,3 @@ this.c = t1 - this.b * this.x1;
 |  `speed`  |  Number  |  optional  |  动画每帧 x 轴偏移距离  |  5  |
 |  `direction`  |  String  |  optional  |  抛物线开口方向，仅当为 "down" 时开口向下，不传或其它皆为向上  |  `none`  |
 |  `onMotionDone`  |  Function  |  optional  |  动画完成回调  |  `none`  |
-
