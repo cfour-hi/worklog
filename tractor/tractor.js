@@ -1,4 +1,4 @@
-!(function tractor() {
+!(function () {
 
   var TRACTOR_TOUCHING = 'tractor-touching';
   var TRACTOR_LESS = 'tractor-less';
@@ -39,7 +39,7 @@
     var tractor = this.tractor;
     var isTouchStart = false; // 是否已经触发下拉条件
     var isDragStart = false; // 是否已经开始下拉
-    var valveState = false; // 是否下拉到阈值，用来触发 hock 的标识
+    var valveState = false; // 是否下拉到阈值，用来触发 hook 的标识
 
     // 下拉 touchstart 时的点坐标
     var startX, startY;
@@ -86,11 +86,11 @@
 
         tractor.scroller.classList.add(TRACTOR_TOUCHING);
 
-        // 触发下拉开始 hock
+        // 触发下拉开始 hook
         if (!isDragStart) {
           isDragStart = true;
 
-          // hock
+          // hook
           tractor.onDragStart();
         }
 
@@ -100,7 +100,7 @@
           if (tractor.scroller.classList.contains(TRACTOR_GREATER)) { tractor.scroller.classList.remove(TRACTOR_GREATER); }
           if (!tractor.scroller.classList.contains(TRACTOR_LESS)) { tractor.scroller.classList.add(TRACTOR_LESS); }
 
-          // 触发下拉未达到阈值状态 hock
+          // 触发下拉未达到阈值状态 hook
           if (!valveState) {
             valveState = !valveState;
             tractor.onDragLessValve();
@@ -111,7 +111,7 @@
           if (tractor.scroller.classList.contains(TRACTOR_LESS)) { tractor.scroller.classList.remove(TRACTOR_LESS); }
           if (!tractor.scroller.classList.contains(TRACTOR_GREATER)) { tractor.scroller.classList.add(TRACTOR_GREATER); }
 
-          // 触发下拉已达到阈值状态 hock
+          // 触发下拉已达到阈值状态 hook
           if (valveState) {
             valveState = !valveState;
             tractor.onDragGreaterValve();
@@ -139,7 +139,7 @@
         tractor.scroller.classList.add(TRACTOR_REFRESHING);
         self.translateScroller(100, tractor.dragValve);
 
-        // 触发下拉加载（刷新）完成 hock
+        // 触发下拉加载（刷新）完成 hook
         tractor.onDragDone();
       }
     }
@@ -164,7 +164,7 @@
       if (scrollValve <= tractor.scrollValve) {
         self.scrollerLoading = true;
 
-        // hock
+        // hook
         tractor.onScroll2Valve();
       }
     }

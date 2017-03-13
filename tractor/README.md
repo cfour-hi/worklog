@@ -12,23 +12,25 @@
 
 此轮子的实现核心有以下几个点：
 
-1. touch 事件和 scroll 事件
+1. 结构
+  因为要达到在 ios 系统上惯性滚动到容器顶部时也出现下拉的提示信息，所以在结构方面有所要求。我的实现是使用绝对定位 `absolute` 的方式把整个容器向上偏移阈值距离，这个需要在 css 内自己实现，此轮子并不会做处理，详细请看 [tractor.html](https://github.com/Monine/worklog/blob/master/tractor/tractor.html)。
+2. touch 事件和 scroll 事件
   touch 事件控制下拉加载（刷新），scroll 事件控制滚动加载。
-2. touchstart 时容器的 `scrollTop` 值
+3. touchstart 时容器的 `scrollTop` 值
   先确认容器滚动目前处于顶部（`scrollTop` 值为 0），此时记录手指在屏幕的坐标值并标识当前处于下拉状态。
-3. 确定触发下拉状态之后手指在屏幕上移动的距离
+4. 确定触发下拉状态之后手指在屏幕上移动的距离
   touchmove 时计算出手指在 y 轴滑动的距离，用来计算容器偏移的 `translate` 值，此时要随着偏移的距离切换显示不同的提示信息。
-4. scroll 时容器的 `scrollTop` 值
+5. scroll 时容器的 `scrollTop` 值
   容器滚动到离底部还剩一定距离（阈值）时触发加载事件，`容器 scrollHeight - 容器 height - 容器滚动距离 scrollTop <= 滚动阈值 tractor.scrollValve`。
 
-下拉时在不同的状态下，会给容器添加不同的 className 和 hock：
+下拉时在不同的状态下，会给容器添加不同的 className 和 hook：
 
-1. 当确定触发下拉状态并滑动添加 className `tractor-touching`，触发 onDragStart hock。
-2. 当下拉的距离小于等于设置的阈值添加 className `tractor-less`，触发 onDragLessValve hock。
-3. 当下拉的距离大于设置的阈值添加 className `tractor-greater`，触发 onDragGreaterValve hock。
-4. 当手指离开屏幕触发 touchend 事件，并且下拉的距离大于设置的阈值，添加 className `tractor-refreshing`，触发 onDragDone hock。
+1. 当确定触发下拉状态并滑动添加 className `tractor-touching`，触发 onDragStart hook。
+2. 当下拉的距离小于等于设置的阈值添加 className `tractor-less`，触发 onDragLessValve hook。
+3. 当下拉的距离大于设置的阈值添加 className `tractor-greater`，触发 onDragGreaterValve hook。
+4. 当手指离开屏幕触发 touchend 事件，并且下拉的距离大于设置的阈值，添加 className `tractor-refreshing`，触发 onDragDone hook。
 
-滚动时只会添加一个 hock：当滚动到阈值时触发 onScroll2Valve hock。
+滚动时只会添加一个 hook：当滚动到阈值时触发 onScroll2Valve hook。
 
 *Tips: 以上 className 都会在适当的时候移除*
 
@@ -45,8 +47,8 @@
 |  `openScrollLoading`  |  Boolean  |  是否开启滚动加载  |  `true`  |
 |  `dragValve`  |  Number  |  下拉阈值  |  40  |
 |  `scrollValve`  |  Number  |  滚动阈值  |  40  |
-|  `onDragStart`  |  Function  |  hock  |  空函数  |
-|  `onDragLessValve`  |  Function  |  hock  |  空函数  |
-|  `onDragGreaterValve`  |  Function  |  hock  |  空函数  |
-|  `onDragDone`  |  Function  |  hock  |  空函数  |
-|  `onScroll2Valve`  |  Function  |  hock  |  空函数  |
+|  `onDragStart`  |  Function  |  hook  |  空函数  |
+|  `onDragLessValve`  |  Function  |  hook  |  空函数  |
+|  `onDragGreaterValve`  |  Function  |  hook  |  空函数  |
+|  `onDragDone`  |  Function  |  hook  |  空函数  |
+|  `onScroll2Valve`  |  Function  |  hook  |  空函数  |
