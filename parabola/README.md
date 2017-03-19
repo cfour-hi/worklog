@@ -5,7 +5,7 @@
 <!-- more -->
 
 - [插件地址](https://github.com/Monine/worklog/tree/master/parabola)
-- [Demo](http://monine.github.io/worklog/parabola/parabola.html)
+- [Demo](https://rawgit.com/Monine/worklog/master/parabola/parabola.html)
 
 这年头还是不要抱着侥幸的心理去看人家大厂页面的源码啦，都是打包压缩之后对程序员不友好的代码，看着实在让人蛋疼。既然源码找不到任何头绪，那咱就只能问 Google 大爷啦，看它能为我提供啥样的解决方案。找着找着，让我又看到一个熟悉的名字 － 张鑫旭，标题是[《小折腾：JavaScript与元素间的抛物线轨迹运动》](http://www.zhangxinxu.com/wordpress/2013/12/javascript-js-%E5%85%83%E7%B4%A0-%E6%8A%9B%E7%89%A9%E7%BA%BF-%E8%BF%90%E5%8A%A8-%E5%8A%A8%E7%94%BB/)，瞬间我就感觉这事靠谱啦。
 
