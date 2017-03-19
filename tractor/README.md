@@ -4,7 +4,8 @@
 
 <!-- more -->
 
-[插件地址](https://github.com/Monine/worklog/tree/master/tractor) 和 [Demo](https://monine.github.io/worklog/tractor/tractor.html)
+- [插件地址](https://github.com/Monine/worklog/tree/master/tractor)
+- [Demo](https://monine.github.io/worklog/tractor/tractor.html)
 
 **此轮子不依赖任何插件**，只是如果对兼容性要求特别高，比如 IE9 以下，请自行修改 tractor.js 源码内的事件绑定，添加 IE 的事件绑定实现 `attachEvent`，我个人对 IE 的兼容性从来都是无视的，实在不想被折磨。然后轮子有使用到 `requestAnimationFrame`，同样如果需要极其苛刻的兼容性请自行添加 [Polyfill](https://github.com/darius/requestAnimationFrame)。
 
