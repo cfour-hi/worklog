@@ -5,10 +5,9 @@
 <!-- more -->
 
 [插件地址](https://github.com/Monine/worklog/tree/master/tractor)
+[Demo](https://monine.github.io/worklog/tractor/tractor.html)
 
 **此轮子不依赖任何插件**，只是如果对兼容性要求特别高，比如 IE9 以下，请自行修改 tractor.js 源码内的事件绑定，添加 IE 的事件绑定实现 `attachEvent`，我个人对 IE 的兼容性从来都是无视的，实在不想被折磨。然后轮子有使用到 `requestAnimationFrame`，同样如果需要极其苛刻的兼容性请自行添加 [Polyfill](https://github.com/darius/requestAnimationFrame)。
-
-其实这个轮子两周之前就写出来了，但是一直没用到项目上是因为当时这个轮子还存在一个未知之谜：下拉开始的时候会莫名其妙出现闪屏的现象，通过分析发现是因为使用了 `transition` 的原因，但是我这的实现方案必须依赖 `transition`。使用了一系列解决办法都没什么用，比如设置进行转换的元素的背面在面对用户时隐藏 `-webkit-backface-visibility: hidden;`，保留 3D `-webkit-transform-style: preserve-3d;`，然而就在今天我把代码的结构调整了一下之后，这么问题（现象）就莫名奇妙解决了，实现的方案没有任何改变，可就是这么莫名奇妙的好啦...出于不达目的不罢休的心态，实在想弄明白咋回事，就对比了下前后代码，发现 JS 实现除了结构其它没有任何变化，没办法再看看 Demo 的 html 文件，发现样式有些小删减，还原之后再查看 Demo 发现尼玛闪屏的现象又出现啦！这尼玛能忍？害我纳闷了这么久，最终定位问题是出在 `overflow` 属性上，绕了这么大一圈，原来是 CSS 的问题。
 
 此轮子的实现核心有以下几个点：
 
@@ -38,7 +37,7 @@
 1. 下拉加载（刷新）完成之后请务必调用 Tractor 原型上的 dragLoadingDone 方法，表示此次下拉结束。
 2. 滚动加载完成之后请务必调用 Tractor 原型上的 scrollLoadingDone 方法，表示此次滚动结束。
 
-最后，上 [Demo](https://monine.github.io/worklog/tractor/tractor.html) 和参数介绍：
+最后，上参数介绍：
 
 |  参数(Argument)  |  类型(Type)  |  描述(Describe)  |  默认(Default)  |
 |   :--:  |  :--:  |  :--:  |  :--:  |
