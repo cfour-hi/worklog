@@ -71,7 +71,7 @@
   bowlProto.draw = function () {
     var ctx = this.cvs.ctx;
     this.foods.forEach(function (food) {
-      ctx.fillStyle = '#0096ff';
+      ctx.fillStyle = '#f04134';
       ctx.fillRect(food.x * this.foodSize, food.y * this.foodSize, this.foodSize, this.foodSize);
     }, this);
   };
@@ -103,7 +103,7 @@
   snakeProto.draw = function () {
     var ctx = this.cvs.ctx;
     this.segments.forEach(function (seg) {
-      ctx.fillStyle = '#333';
+      ctx.fillStyle = '#108ee9';
       ctx.fillRect(seg.x * this.size, seg.y * this.size, this.size, this.size);
     }, this);
   };
@@ -242,8 +242,7 @@
     }
   };
 
-  var controllerDirs = document.querySelectorAll('.controller-dir')
-  Array.prototype.forEach.call(controllerDirs, function (ctrl) {
+  Array.prototype.forEach.call(document.querySelectorAll('.controller-dir'), function (ctrl) {
     // Google 移动端点击延迟 300ms 解决方案 PEP
     // https://github.com/jquery/PEP
     ctrl.addEventListener('pointerdown', function () {
