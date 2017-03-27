@@ -198,15 +198,7 @@
       cvs = new Canvas(canvas);
       cvs.draw();
 
-      var parentEl = this.parentElement;
-      while (parentEl) {
-        if (parentEl.classList.contains('dialog-modal')) {
-          parentEl.classList.remove(ACTIVE);
-          break;
-        } else {
-          parentEl = parentEl.parentElement;
-        }
-      }
+      this.closest('.dialog-modal').classList.remove(ACTIVE);
     };
   });
 
