@@ -216,6 +216,8 @@
   });
 
   document.onkeydown = function (event) {
+    if (!cvs) { return; }
+
     var key = event.keyCode;
     var snake = cvs.graphs.snake;
 

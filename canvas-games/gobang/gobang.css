@@ -1,0 +1,40 @@
+.canvas-operate {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.next-piece {
+  display: block;
+  width: 90px; height: 30px;
+  margin: 20px 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.next-piece.white-piece {
+  background-image: url(../lib/image/white-piece.png);
+}
+.next-piece.black-piece {
+  background-image: url(../lib/image/black-piece.png);
+}
+
+.canvas-operate button {
+  width: 90px; height: 30px;
+  border: none;
+  margin: 10px 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.canvas-operate .backspace {
+  background-color: #f56a00;
+}
+.canvas-operate .cancel-backspace {
+  background-color: #108ee9;
+}
+.canvas-operate .cancel-backspace[disabled] {
+  background-color: #919191;
+}
+
+
