@@ -45,6 +45,13 @@
 
     // 初始化 canvas 大小
     this.el.width = this.el.height = (this.range + 1) * this.distance;
+
+    // 绑定点击事件
+    this.el.onclick = function (event) {
+      var x = Math.round((event.layerX - this.distance) / this.distance);
+      var y = Math.round((event.layerY - this.distance) / this.distance);
+      this.drawPiece(x, y);
+    }.bind(this);
   };
 
   // 绘制棋盘
@@ -81,13 +88,7 @@
    * 当用户点击棋盘的时候，x 和 y 是棋盘上的 layerX 和 layerY，并且有 type 值为 'click'
    * 当 canvas 重绘的时候，x 和 y 是棋子对应的点坐标，type 默认不传
    */
-  gobangProto.drawPiece = function (x, y, type) {
-    // 计算出棋子对应的点坐标
-    if (type && type === 'click') {
-      x = Math.round((x - this.distance) / this.distance);
-      y = Math.round((y - this.distance) / this.distance);
-    }
-
+  gobangProto.drawPiece = function (x, y) {
     if (x < 0 || x >= this.range || y < 0 || y >= this.range) {
       return console.warn('超出有效点击范围！');
     }
@@ -101,6 +102,11 @@
 
     if (this.checkGameover(x, y)) {
       console.info('游戏结束！');
+
+      // 移除绑定事件
+      this.el.onclick = null;
+
+      // 游戏结束回调
       if (this.onGameover) {
         this.onGameover(this['player' + this.currentPlayer]);
       }
@@ -349,14 +355,6 @@
     }
   }, false);
 
-  // 点击棋盘绘制棋子
-  gobang.addEventListener('click', function (event) {
-    if (!cvs) {
-      return console.error('Gobang canvas 实例未生成！');
-    }
-    cvs.drawPiece(event.layerX, event.layerY, 'click');
-  }, false);
-
   // 悔棋
   document.querySelector('.backspace').addEventListener('click', function () {
     cvs.backspace();
@@ -376,6 +374,8 @@
     } else if (player.mark === 2) {
       nextPiece.classList.remove('white-piece');
       nextPiece.classList.add('black-piece');
+    } else {
+      console.error('玩家 mark 值出错！');
     }
   }
 
@@ -384,7 +384,6 @@
   function gameover(player) {
     gameoverDialog.querySelector('.game-over').textContent = player.name + '赢';
     gameoverDialog.classList.add(ACTIVE);
-    cvs = null;
   }
 
   // 悔棋回调
