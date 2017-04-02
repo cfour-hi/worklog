@@ -11,9 +11,7 @@
 </head>
 <body>
   <main>
-    <div class="canvas-wrap">
-      <canvas class="gobang-canvas"></canvas>
-    </div>
+    <div class="game-wrap"></div>
     <div class="canvas-operate">
       <i class="next-piece white-piece"></i>
       <button class="backspace" type="button">悔棋</button>
@@ -28,7 +26,8 @@
           <p>五子棋</p>
         </div>
         <footer>
-          <button class="start-game" type="button">开始游戏</button>
+          <button class="start-game canvas-game" type="button" data-type="canvas">canvas 游戏</button>
+          <button class="start-game dom-game" type="button" data-type="dom">DOM 游戏</button>
         </footer>
       </div>
     </div>
@@ -41,11 +40,12 @@
           <big class="game-over"></big>
         </div>
         <footer>
-          <button class="start-game" type="button">再玩一次</button>
+          <button class="start-game canvas-game" type="button" data-type="canvas">canvas 游戏</button>
+          <button class="start-game dom-game" type="button" data-type="dom">DOM 游戏</button>
         </footer>
       </div>
     </div>
   </section>
-  <script src="gobang.js"></script>
+  <script src="//cdn.bootcss.com/require.js/2.3.3/require.min.js" data-main="main"></script>
 </body>
 </html>
