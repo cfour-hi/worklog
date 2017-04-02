@@ -67,12 +67,14 @@ define([
 
       this.vm.pushStep(x, y, currentPlayer);
 
-      if (this.vm.checkGameover(x, y, currentPlayer)) {
+      var player = this.vm.checkGameover(x, y, currentPlayer);
+
+      if (player) {
         this.gameover = true;
 
         // 游戏结束回调
         if (this.onGameover) {
-          this.onGameover(currentPlayer);
+          this.onGameover(player);
         }
         return console.info('游戏结束！');
       }

@@ -49,7 +49,7 @@ require([
       gobang = new Gobang({
         el: el,
         type: type,
-        range: 16,
+        range: 15,
         distance: 40,
         whitePiece: whitePiece,
         blackPiece: blackPiece,
@@ -69,7 +69,7 @@ require([
     gobang.backspace();
   }, false);
 
-  // // 撤销悔棋
+  // 撤销悔棋
   document.querySelector('.cancel-backspace').addEventListener('click', function () {
     gobang.cancelBackspace();
   }, false);
@@ -91,11 +91,18 @@ require([
   var gameoverDialog = document.querySelector('.dialog-modal__gameover');
   // // 游戏结束回调
   function gameover(player) {
-    gameoverDialog.querySelector('.game-over').textContent = player.name + '赢';
+    var gameover = gameoverDialog.querySelector('.game-over');
+
+    if (typeof player === 'string') {
+      gameover.textContent = '和局';
+    } else {
+      gameover.textContent = player.name + '赢';
+    }
+
     gameoverDialog.classList.add(ACTIVE);
   }
 
-  // // 悔棋回调
+  // 悔棋回调
   function backspace(player) {
     stepPiece(player);
   }

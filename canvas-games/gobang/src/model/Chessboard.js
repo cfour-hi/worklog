@@ -53,6 +53,10 @@ define([
     var i;
     var j;
 
+    if (this.steps.length >= Math.pow(this._gobang.range, 2)) {
+      return 'coverd';
+    }
+
     // 水平方向检查
     for (i = x; i >= 0; i--) {
       if (this.pieces[i][y].player === player) {
@@ -71,7 +75,7 @@ define([
     }
 
     if (countHorizontal >= this._gobang.winLen) {
-      return true;
+      return player;
     }
 
     // 垂直方向检查
@@ -92,7 +96,7 @@ define([
     }
 
     if (countVertical >= this._gobang.winLen) {
-      return true;
+      return player;
     }
 
     // 左上向右下检查（反斜线）
@@ -113,7 +117,7 @@ define([
     }
 
     if (countBackslash >= this._gobang.winLen) {
-      return true;
+      return player;
     }
 
     // 右上向左下检查（斜线）
@@ -134,7 +138,7 @@ define([
     }
 
     if (countSlash >= this._gobang.winLen) {
-      return true;
+      return player;
     }
 
     return false;
