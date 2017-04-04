@@ -3,12 +3,12 @@ require.config({
   baseUrl: 'src',
   paths: {
     'util': 'shared/util',
-    'Gobang': 'ctrl/Gobang',
-    'Player': 'ctrl/Player',
-    'AIPlayer': 'ctrl/AIPlayer',
-    'Chessboard': 'model/Chessboard',
-    'CanvasGobang': 'view/CanvasGobang',
-    'DOMGobang': 'view/DOMGobang'
+    'Gobang': 'ctrl/gobang',
+    'Player': 'ctrl/player',
+    'AIPlayer': 'ctrl/ai-player',
+    'Chessboard': 'model/chessboard',
+    'CanvasGobang': 'view/canvas',
+    'DOMGobang': 'view/dom'
   }
 });
 
