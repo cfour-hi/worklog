@@ -181,7 +181,7 @@ define([
     // 先进后出 从 steps 内取出坐标放入 backspaces
     var point = this.steps.pop();
     this.backspaces.push(_.extend({}, point));
-    point.player = null;
+    this.pieces[point.x][point.y].player = null;
     this.playerIndex = togglePlayerIndex(this.playerIndex);
   };
 
