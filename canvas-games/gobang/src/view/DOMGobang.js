@@ -67,6 +67,7 @@ define(function () {
   DOMGobang.prototype.drawPiece = function (piece, x, y) {
     var gb = this._gobang;
     var halfDistance = gb.distance / 2;
+    var piece = piece.cloneNode();
     var backspacePieces;
 
     // 移除 hidden piece image
@@ -81,7 +82,7 @@ define(function () {
     piece.style.top = ((y * gb.distance) + gb.distance - halfDistance + 2) + 'px';
     piece.style.left = ((x * gb.distance) + gb.distance - halfDistance + 2) + 'px';
 
-    this.piecesMap.appendChild(piece.cloneNode());
+    this.piecesMap.appendChild(piece);
     this.step += 1;
   };
 
@@ -96,7 +97,6 @@ define(function () {
     if (!this.hasBackspace) {
       this.hasBackspace = true;
     }
-
   };
 
   /**
@@ -107,7 +107,7 @@ define(function () {
    *
    * 这一步也仅仅是让已经悔棋的棋子可见，避免 reflow
    */
-  DOMGobang.prototype.cancelBackspace = function (x, y, player) {
+  DOMGobang.prototype.cancelBackspace = function () {
     var backspacePieces = this.piecesMap.querySelectorAll('.backspace-piece');
 
     backspacePieces[0].classList.remove('backspace-piece');

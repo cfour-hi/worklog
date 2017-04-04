@@ -1,14 +1,20 @@
 define([
   'util',
-], function (_) {
+  'Player',
+  'AIPlayer',
+], function (_, Player, AIPlayer) {
 
   var Chessboard = function (gobang) {
     this._gobang = gobang;
+    this.gameover = false;
+    this.playerIndex = 0;
+    this.players = [];
     this.steps = [];
     this.backspaces = [];
     this.pieces = new Array(gobang.range);
 
     this.init();
+    this.createPlayer();
   };
 
   // 初始化 range * range 二维数组
@@ -27,16 +33,26 @@ define([
     }
   };
 
-  /**
-   * checkCollision - 检查是否碰撞（已有棋子）
-   * * @param {Number} x : 水平方向坐标
-   * * @param {Number} y : 垂直方向坐标
-   */
-  Chessboard.prototype.checkCollision = function (x, y) {
-    if (this.pieces[x][y].player) {
-      return true;
+  // 创建玩家
+  Chessboard.prototype.createPlayer = function () {
+    var player1 = new Player({
+      _gobang: this,
+      piece: this._gobang.whitePiece,
+      index: 0,
+      name: '白棋'
+    });
+
+    var p2Args = {
+      _gobang: this,
+      piece: this._gobang.blackPiece,
+      index: 1,
+      name: '黑棋'
     }
-    return false;
+
+    var player2 = this._gobang.withAI ? new AIPlayer(p2Args) : new Player(p2Args);
+
+    this.players.push(player1);
+    this.players.push(player2);
   };
 
   /**
@@ -54,7 +70,7 @@ define([
     var j;
 
     if (this.steps.length >= Math.pow(this._gobang.range, 2)) {
-      return 'coverd';
+      return 'tie';
     }
 
     // 水平方向检查
@@ -148,55 +164,41 @@ define([
    * pushStep - 下棋
    * * @param {Number} x : 水平方向坐标
    * * @param {Number} y : 垂直方向坐标
-   * * @param {Object} player : 玩家
    */
-  Chessboard.prototype.pushStep = function (x, y, player) {
+  Chessboard.prototype.putPiece = function (x, y) {
     // 如果悔棋之后又下棋则把悔棋数组清空
     if (this.backspaces.length > 0) {
       this.backspaces.length = 0;
     }
 
-    this.pieces[x][y].player = player;
+    this.pieces[x][y].player = this.players[this.playerIndex];
     this.steps.push(this.pieces[x][y]);
-
-    // 触发视图更新
-    this._gobang.view.drawPiece(player.piece, x, y);
+    this.playerIndex = togglePlayerIndex(this.playerIndex);
   };
 
   // 悔棋
   Chessboard.prototype.pushBackspace = function () {
-    if (this.steps.length === 0) {
-      return false;
-    }
-
     // 先进后出 从 steps 内取出坐标放入 backspaces
     var point = this.steps.pop();
-    // 需要注意对象的引用
     this.backspaces.push(_.extend({}, point));
-    this.pieces[point.x][point.y].player = null;
-
-    // 触发视图更新
-    this._gobang.view.backspace();
-
-    return point;
+    point.player = null;
+    this.playerIndex = togglePlayerIndex(this.playerIndex);
   };
 
   // 撤销悔棋
   Chessboard.prototype.cancelBackspace = function () {
-    if (this.backspaces.length === 0) {
-      return false;
-    }
-
     // 先进后出 从 backspaces 内取出坐标放入 steps
     var point = this.backspaces.pop();
     this.pieces[point.x][point.y].player = point.player;
     this.steps.push(point);
-
-    // 触发视图更新
-    this._gobang.view.cancelBackspace(point.x, point.y, point.player);
+    this.playerIndex = togglePlayerIndex(this.playerIndex);
 
     return point;
   };
+
+  function togglePlayerIndex(index) {
+    return index === 0 ? 1 : 0;
+  }
 
   return Chessboard;
 

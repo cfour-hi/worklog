@@ -57,7 +57,8 @@ require([
         // withAI: true,
         onStep: stepPiece,
         onGameover: gameover,
-        onBackspace: backspace
+        onBackspace: backspace,
+        onCancelBackspace: cancelBackspace
       });
 
       this.closest('.dialog-modal').classList.remove(ACTIVE);
@@ -75,7 +76,7 @@ require([
   }, false);
 
   var nextPiece = document.querySelector('.next-piece');
-  // // 每下一步棋会被触发的 hook 函数
+  // 每下一步棋会被触发的 hook 函数
   function stepPiece(player) {
     if (player.index === 0) {
       nextPiece.classList.remove('black-piece');
@@ -84,19 +85,21 @@ require([
       nextPiece.classList.remove('white-piece');
       nextPiece.classList.add('black-piece');
     } else {
-      console.error('玩家 mark 值出错！');
+      console.error('玩家 index 值出错！');
     }
   }
 
   var gameoverDialog = document.querySelector('.dialog-modal__gameover');
-  // // 游戏结束回调
-  function gameover(player) {
+  // 游戏结束回调
+  function gameover(result) {
     var gameover = gameoverDialog.querySelector('.game-over');
 
-    if (typeof player === 'string') {
+    if (typeof result === 'string' && result === 'tie') {
       gameover.textContent = '和局';
+    } else if (typeof result === 'object' && result.name) {
+      gameover.textContent = result.name + '赢';
     } else {
-      gameover.textContent = player.name + '赢';
+      console.error('游戏胜负结果错误！');
     }
 
     gameoverDialog.classList.add(ACTIVE);
@@ -104,6 +107,11 @@ require([
 
   // 悔棋回调
   function backspace(player) {
+    stepPiece(player);
+  }
+
+  // 撤销悔棋回调
+  function cancelBackspace(player) {
     stepPiece(player);
   }
 

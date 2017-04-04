@@ -68,8 +68,8 @@ define(function () {
    * * @param {Number} y : 垂直方向坐标
    * * @param {Object} player : 玩家
    */
-  CanvasGobang.prototype.cancelBackspace = function (x, y, player) {
-    this.drawPiece(player.piece, x, y);
+  CanvasGobang.prototype.cancelBackspace = function (point) {
+    this.drawPiece(point.player.piece, point.x, point.y);
   };
 
   return CanvasGobang;
