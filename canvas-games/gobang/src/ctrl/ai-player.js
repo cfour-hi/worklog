@@ -7,6 +7,7 @@ define([
   };
 
   AIPlayer.prototype = Object.create(Player.prototype);
+  AIPlayer.prototype.constructor = AIPlayer;
 
   return AIPlayer;
 
