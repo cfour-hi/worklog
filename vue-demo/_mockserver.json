@@ -1,0 +1,165 @@
+// _mockserver.json - mock 接口的配置文件
+// 可以在这个 JSON 中使用注释, 方便对接口做一些说明
+//
+// The minimal _mockserver.json, JSON 必须包含如下信息, 其他字段均是可选字段
+// {
+//     "api": {
+//         "GET /api/users": {
+//             "response": {
+//                 "text": "固定值", // 可以夹杂其他固定值
+//                 "guid": "@guid",
+//                 "index": "@increment",
+//                 "name": "@cname",
+//                 // 占位符是可以组合使用的, 因此可以更灵活的使用
+//                 // XXX 必须使用 province1 这样的属性名, 不要直接叫做 province,
+//                 // 否则会造成冲突, 出现 Maximum call stack size exceeded 异常
+//                 // 以此类推, 只要使用了组合的占位符, 然后再设置属性名与其中的某个占位符的名字相同, 就会出现这个问题
+//                 // PS: 使用单个占位符的时候不会出现这种问题
+//                 // https://github.com/nuysoft/Mock/issues/137
+//                 "address": "@province@city@county",
+//                 "email": "@email",
+//                 "desc": "@cparagraph",
+//                 "avatar": "@image('200x100', '#50B347', '#FFF', 'Mock.js')",
+//                 "age": "@integer(10, 50)",
+//                 "money": "@float(0, 100, 2, 2)", // 返回带2位小数位的小数
+//                 "isVip": "@boolean",
+//                 "now": "@now('yyyy-MM-dd HH:mm:ss')",
+//                 "datetime": "@datetime('yyyy-MM-dd HH:mm:ss')",
+//                 "url": "@url('http')",
+//                 "gender": "@pick(['male', 'female'])", // 随机取一个
+//                 "timestamp": "@integer(1471491895528, 1481491895528)" // 通过整型数字来伪造时间戳
+//             }
+//         }
+//     }
+// }
+{
+    // Visual Stuido Code 支持通过 JSON schema 来验证 JSON 文件的格式并给予提示信息
+    // To understand the structure of JSON files, we use JSON schemas
+    // https://code.visualstudio.com/Docs/languages/json#_json-schemas-settings
+    "$schema": "http://rawgit.com/ufologist/puer-mock/master/_mockserver-schema.json",
+    // 项目的介绍信息
+    "info": {
+        "summary": "xxx 项目接口文档",
+        "description": "如此高大上的接口文档 Powered by puer-mock"
+    },
+    // 接口列表
+    "api": {
+        "GET /api/modules": {
+            "info": {
+                "summary": "模块列表",
+                "module": "模块",
+                "description": "获取所有模块信息",
+                "author": "Monine"
+            },
+            "response": [
+                {
+                    "id": 2,
+                    "name": "在线考试",
+                    "description": null,
+                    "route": "/module1/page1",
+                    "order": 1,
+                    "childMenus": [
+                        {
+                            "id": 6,
+                            "name": "内容发布",
+                            "description": "发布审核内容",
+                            "route": "/module1/page1",
+                            "order": 1,
+                            "childMenus": [],
+                            "level": 2,
+                            "styleClass": "sytle6",
+                            "linkType": 1,
+                            "type": {
+                                "name": "宣传",
+                                "order": null,
+                                "styleClass": null
+                            },
+                            "active": true
+                        },
+                        {
+                            "id": 7,
+                            "name": "栏目管理",
+                            "description": "栏目的定义与分级管理",
+                            "route": "/module1/page2",
+                            "order": 2,
+                            "childMenus": [],
+                            "level": 2,
+                            "styleClass": "sytle7",
+                            "linkType": 1,
+                            "type": {
+                                "name": "宣传",
+                                "order": null,
+                                "styleClass": null
+                            },
+                            "active": false
+                        }
+                    ],
+                    "level": 1,
+                    "styleClass": "sytle2",
+                    "linkType": 1,
+                    "type": {
+                        "id": "@id",
+                        "name": "考试学习",
+                        "order": null,
+                        "styleClass": null
+                    },
+                    "active": true
+                },
+                {
+                    "id": 3,
+                    "name": "培训与学习",
+                    "description": "在线的培训与管理",
+                    "route": "/module2/page1",
+                    "order": 2,
+                    "childMenus": [],
+                    "level": 1,
+                    "styleClass": "sytle3",
+                    "linkType": 1,
+                    "type": {
+                        "id": "@id",
+                        "name": "考试学习",
+                        "order": null,
+                        "styleClass": null
+                    },
+                    "active": false
+                },
+                {
+                    "id": 4,
+                    "name": "内容管理",
+                    "description": "新闻发布与内容管理",
+                    "route": "/module3/page1",
+                    "order": 3,
+                    "childMenus": [],
+                    "level": 1,
+                    "styleClass": "sytle4",
+                    "linkType": 1,
+                    "type": {
+                        "id": "@id",
+                        "name": "宣传",
+                        "order": null,
+                        "styleClass": null
+                    },
+                    "active": false
+                },
+                {
+                    "id": 5,
+                    "name": "门户首页",
+                    "description": "新闻内容的展示",
+                    "route": "/module4/page1",
+                    "order": 4,
+                    "childMenus": [],
+                    "level": 1,
+                    "styleClass": "sytle5",
+                    "linkType": 1,
+                    "type": {
+                        "id": "@id",
+                        "name": "宣传",
+                        "order": null,
+                        "styleClass": null
+                    },
+                    "active": false
+                }
+            ]
+        }
+    }
+}
