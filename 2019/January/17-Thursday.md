@@ -6,8 +6,6 @@
   > 2、你是如何来对照测试用例进行自测并保证自测质量？  
   > 3、为什么我们的联调时间可以缩短为1天？
 
-  长沙-前端-周祥
-
   1. 针对每一项改动对照原型进行梳理确认，从模块、交互、接口、数据模型等方面进行功能分解。  
     模块：模块归属  
     交互：用户行为、初始化、权限  
@@ -62,10 +60,10 @@
 
   > 因此我们在基于自动化测试、自动化部署等持续集成工具的平台上，使用重视原型迭代的方法来开发项目，在反复以原型确认需求，以及适应需求变化的过程中，逐步的完善整个开发生产线。并且把开发和运营视为一个整体，在服务的运营过程中，不断的完善互联网服务的运营工具，让开发和运营在同一个生命周期里生长。
 
-- [LIP技术给Web布局带来的变化](https://www.w3cplus.com/javascript/animating-layouts-with-the-flip-technique.html)
+- [FLIP技术给Web布局带来的变化](https://www.w3cplus.com/javascript/animating-layouts-with-the-flip-technique.html)
 
   FLIP（First, Last, Invert, Play）  
-  动画源于生活
+  动画源于生活，动画将用户界面带入生活。
 
 ## 谈话交流
 
