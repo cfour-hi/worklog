@@ -28,3 +28,18 @@
 ## 每日阅读
 
 - [什么是真正的程序员](https://www.cnblogs.com/xueweihan/p/5220513.html)
+
+	原文：[My bad opinions](https://ferd.ca/the-little-printf.html)
+	> Where I got dragged in the game of trying to become a real programmer, Printf didn't. He said he was okay with not being a real programmer, that he preferred to be a programmer with a human face.
+
+	做有意义的事，写有意义的代码，解决 真正/实际 的问题，而不是为了解决问题而解决问题。
+
+- [Worth moving to Sweden as engineers?](http://hongchao.me/living-and-working-in-sweden-as-engineers/)
+
+	好羡慕瑞典完善的社会体系和福利待遇
+
+## 探索发现
+
+- [devhub](https://github.com/devhubapp/devhub)
+
+	将 GitHub 动态以 TweetDeck 形式展示
