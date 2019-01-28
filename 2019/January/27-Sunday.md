@@ -1,4 +1,4 @@
-## 每日阅读
+## 阅读思考
 
 - [CSS var变量的局部作用域特性](https://www.zhangxinxu.com/wordpress/2019/01/css-var-%E5%8F%98%E9%87%8F-%E5%B1%80%E9%83%A8/)
 

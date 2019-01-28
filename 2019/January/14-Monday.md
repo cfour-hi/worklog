@@ -9,7 +9,7 @@
 
 - [x] 工作周报
 
-## 每日阅读
+## 阅读思考
 
 - [浏览器往返缓存（Back/Forward cache）问题的分析与解决](https://efe.baidu.com/blog/bfcache-analysis-and-fix/)
 

@@ -1,4 +1,4 @@
-## 每日阅读
+## 阅读思考
 
 - [what-happens-when-zh_CN](https://github.com/skyline75489/what-happens-when-zh_CN)
 

@@ -15,7 +15,7 @@
 	...
 
 
-## 每日阅读
+## 阅读思考
 
 - [精读《国际化布局 - Logical Properties》](https://github.com/dt-fe/weekly/blob/master/86.%E7%B2%BE%E8%AF%BB%E3%80%8A%E5%9B%BD%E9%99%85%E5%8C%96%E5%B8%83%E5%B1%80%20-%20Logical%20Properties%E3%80%8B.md)
 

@@ -25,7 +25,7 @@
 
 	已安排 @三炮 处理
 
-## 每日阅读
+## 阅读思考
 
 - [什么是真正的程序员](https://www.cnblogs.com/xueweihan/p/5220513.html)
 
