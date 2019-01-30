@@ -5,9 +5,9 @@
 
 ## 阅读思考
 
-- [每周分享第 39 期（20190111）](https://www.yuque.com/ruanyf/share/issue-39)
+* [每周分享第 39 期（20190111）](https://www.yuque.com/ruanyf/share/issue-39)
 
-- [2019年 UI 和 UX 设计趋势](https://mp.weixin.qq.com/s/5FNDWFJsD0KbimJ4XjcCDA)
+* [2019年 UI 和 UX 设计趋势](https://mp.weixin.qq.com/s/5FNDWFJsD0KbimJ4XjcCDA)
 
 	> 动效设计不仅仅只是做展示，如今也已经成为了品牌的一部分。然而，Logo仍然是一个商标最容易被人记住的代表，可以利用动效赋予它们一些新的活力！
 
@@ -15,7 +15,7 @@
 	
 	> 未来的趋势应该是保留扁平化设计的同时，尽可能的去还原真实场景体验。
 
-- [2018年IoT那些事儿](https://www.freebuf.com/articles/terminal/193303.html)
+* [2018年IoT那些事儿](https://www.freebuf.com/articles/terminal/193303.html)
 
 	看到这标题的时候我还纳闷，IoT 是啥呀？  
 	这篇文章主要阐述 IoT 安全方面的问题，确实...过年在家我也找个时间尝试去黑一下我家路由器。  

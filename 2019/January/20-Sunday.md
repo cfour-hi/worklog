@@ -1,6 +1,6 @@
 ## 阅读思考
 
-- [what-happens-when-zh_CN](https://github.com/skyline75489/what-happens-when-zh_CN)
+* [what-happens-when-zh_CN](https://github.com/skyline75489/what-happens-when-zh_CN)
 
 	> 这个仓库试图回答一个古老的面试问题：当你在浏览器中输入 google.com 并且按下回车之后发生了什么？
 
@@ -17,4 +17,4 @@
 	8. 页面渲染
 	9. GPU 渲染
 
-	<!-- TODO: 深入探索 -->
+	<!-* TODO: 深入探索 -->
