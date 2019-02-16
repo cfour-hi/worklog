@@ -6,21 +6,49 @@
 
 	1. 使用 vue-cli v3 `vue ui` 命令进入 Vue 项目管理器，创建新的 vue 项目。
 
-		-	在预设面板选择手动（手动配置项目）
-		- 在功能面板必选 Babel、TypeScript、Linter / Formatter
-		- 在配置面板取消默认选择的 Use class-style component syntax，我们不需要。原因有两点：一是装饰器的学习理解成本太高；二是不稳定，目前属于过渡方案，以后改成什么样谁也保证不了。选项 Pick a linter / formatter config 选择 ESLint + Airbnb config
+		*	在预设面板选择手动（手动配置项目）
+		* 在功能面板必选 Babel、TypeScript、Linter / Formatter
+		* 在配置面板取消默认选择的 Use class-style component syntax，我们不需要。原因有两点：一是装饰器的学习理解成本太高；二是装饰器语法不稳定，目前还没有定案，以后改成什么样谁也保证不了。选项 Pick a linter / formatter config 选择 ESLint + Airbnb config
 
-	2. 创建项目后打开 .eslintrc.js，将 `'plugin:vue/essential'` 修改为 `'plugin:vue/recommended'`；添加 rules 配置 `'linebreak-style': 0`，因为 windows 系统的换行符为 CRLF。
+	2. 使用 vscode 打开项目，配置工作区设置：
 
-	3. 在根目录创建新文件 vue.config.js，内容如下：
+        ```json
+        {
+          "editor.tabSize": 2,
+          "editor.formatOnSave": true,
+          "files.insertFinalNewline": true,
+          "files.trimTrailingWhitespace": true,
+          "eslint.validate": ["javascript", "vue"],
+        }
+        ```
+
+	3. 打开 .gitignore 删除 .vscode，添加如下配置：
+
+        ```bash
+        .vscode/*
+        !.vscode/settings.json
+        ```
+
+	4. 在根目录创建 prettier 配置文件 .prettierrc.js
 
         ```js
-        // vue.config.js
+        module.exports = {
+          printWidth: 100,
+          singleQuote: true,
+          trailingComma: 'es5',
+        };
+        ```
+
+	5. 打开 .eslintrc.js，将 `'plugin:vue/essential'` 修改为 `'plugin:vue/recommended'`；添加 rules 配置 `'linebreak-style': 0`，因为 windows 系统的换行符为 CRLF。
+
+	6. 在根目录创建新文件 vue.config.js
+
+        ```js
         module.exports = {
           devServer: {
             overlay: {
-            warnings: true,
-            errors: true
+              warnings: true,
+              errors: true
             }
           }
         }
