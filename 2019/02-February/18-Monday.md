@@ -8,6 +8,10 @@
 
 	另外让 @巧云 @三炮 将页面的魔法数字全部替换掉
 
+* [x] 与 @彭泽华 确认运营后台 APP 开发事项
+
+	正在熟悉 Flutter，明天给出 Demo 开发完成时间。
+
 ## 阅读思考
 
 * [Rendering on the Web](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
