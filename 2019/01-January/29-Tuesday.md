@@ -10,12 +10,10 @@
 
 - [x] 处理 CRM v1.13 移动端兼容问题
 
-  v1.13 测出许多之前未考虑到的移动端兼容问题，移动端 UI 库还是不能使用 element-ui
-  ，需要替换成移动端 UI 库。
+  v1.13 测出许多之前未考虑到的移动端兼容问题，移动端 UI 库还是不能使用 element-ui，需要替换成移动端 UI 库。
 
   权衡之后选择了滴滴的 [cube-ui](https://didi.github.io/cube-ui/#/zh-CN) 组件库，本打算使用 mint-ui 的，可 mint-ui 居然都没有 select 组件，没这么多时间研究，很尴尬。因为是新 UI 库，代码都居然还要自己写，诶...真着急。
 
-  `position: fixed;` 在移动端表单交互上存在很蛋疼的问题。  
-  跟进登记设计为我的客户列表页面的弹层，表单在弹层内。键盘弹出后，底
+  `position: fixed;` 在移动端表单交互上存在很蛋疼的问题。
 
   遇到一个奇葩问题，部分 iphone QQ 扫二维码打开页面后，点击 `<a href="tel:13000000000"/>` 居然不触发拨打电话。Google 英文怎么都搜不出解决办法，结果测试让我用百度搜搜，结果还真搜出有用的东西。head meta 信息除了要添加 `<meta name="format-detection" content="telephone=no">` 外，还要添加 `<meta http-equiv="x-rim-auto-match" content="none">`。虽然不知道这到底是怎么回事，不过还真就解决问题了。更让人不解的是，当我注释掉后面的 meta 标签后，居然依然能打电话出去，匪夷所思。💀
