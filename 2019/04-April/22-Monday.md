@@ -39,16 +39,19 @@
     'ElCascader',
     'ElDatePicker',
     'ElTimeSelect',
+    'ElCascader',
   ];
 
   Vue.mixin({
-    beforeCreate() {
+    mounted() {
+      const { name } = this.$options;
+
       // 先确定是否为需要处理的组件
-      if (componentNames.includes(this.$options.componentName)) {
+      if (componentNames.includes(name)) {
         let parent = this.$parent;
 
         // 遍历父级确定当前组件是否处于 ElForm 内
-        while (parent && parent.$options.componentName !== 'ElForm') {
+        while (parent && parent.$options.name !== 'ElForm') {
           parent = parent.$parent;
         }
 
@@ -76,8 +79,16 @@
                */
               if (change[i] === this.$listeners.change) {
                 change[i] = function _change(value, ...args) {
-                  // 点击 clear-x 按钮会将 value 设置为 null
-                  if (value !== null) {
+                  /**
+                   * ElCascader 和 ElSelect(multiple) 组件的 value 值为 Array 类型
+                   * 点击 clear-x 按钮会将 value 设置为 空数组
+                   * 其它组件点击 clear-x 按钮会将 value 设置为 null
+                   */
+                  if (Array.isArray(value)) {
+                    if (value.length > 0) {
+                      this.$listeners.change(value, ...args);
+                    }
+                  } else if (value !== null) {
                     this.$listeners.change(value, ...args);
                   }
                 };
