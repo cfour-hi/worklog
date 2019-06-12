@@ -20,6 +20,15 @@
 
      依赖 @tzfe/eslint-config-airbnb、@tzfe/eslint-config-vue、[@vue/eslint-config-airbnb](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/eslint-config-airbnb)、[babel-eslint](https://github.com/babel/babel-eslint)，作为项目直接使用的 npm 包，还包含实际所需共有配置。
 
+- [x] 工单 v1.23 需求评审
+
+  1. 支持 618 活动短信需求；
+  2. 解决财务和售后部门按科目统计；
+  3. 解决退款的统计问题；
+  4. 优化财务管理下的导出；
+
+  此版本 @彭泽华 负责
+
 ## 阅读思考
 
 ### [十四亿人的口腹之欲，是如何被满足的？](https://www.weibo.com/ttarticle/p/show?id=2309404370494647344427)
