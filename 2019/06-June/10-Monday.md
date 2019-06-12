@@ -3,7 +3,8 @@
 - [x] ESLint npm 包
 
   现在的思路是将 Airbnb 和 Vue Recommend 代码规范进行扩展，作为两个独立的 npm 包。  
-  再新增项目直接使用的 npm 包，添加上述两个扩展的 npm 包，并加入项目实际所需共有配置，供项目直接使用。
+  再新增项目直接使用的 npm 包，添加上述两个扩展的 npm 包，并加入项目实际所需共有配置，供项目直接使用。  
+  项目结构参考 vue-cli 通过 [lerna](https://github.com/lerna/lerna) 这个工具管理所有 npm 包。
 
 - [ ] 接口异常处理方案与 sentry 异常捕获的兼容
 
