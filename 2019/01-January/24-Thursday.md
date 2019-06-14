@@ -2,8 +2,8 @@
 
 - [x] 完成 CRM v1.13 前端任务计划排期和功能分解
 
-  ![版本计划排期](./assets/20190124142955.png)
-  ![前端任务排期和功能分解](./assets/20190124163505.png)
+  ![V4vK6e.png](https://s2.ax1x.com/2019/06/14/V4vK6e.png)
+  ![V4vdXQ.png](https://s2.ax1x.com/2019/06/14/V4vdXQ.png)
 
 - [x] 完成工单 v1.14 前端任务计划排期
 
