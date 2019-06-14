@@ -65,7 +65,7 @@
      流式服务渲染允许你以块的形式发送 HTML，浏览器可以在接收时同步呈现。
 
      最后上一张所有渲染模式对比图：
-     ![](./assets/infographic.png)
+     ![V5SGkR.png](https://s2.ax1x.com/2019/06/14/V5SGkR.png)
      _图片来源 - https://developers.google.com/web/updates/2019/02/rendering-on-the-web_
 
 ## 探索发现
@@ -78,13 +78,13 @@
 
       选择 “不喜欢弹窗广告”，橙色按钮文字会变为 “关闭广告”。
 
-      ![](./assets/20190218091817.png)
+      ![V5Slm4.png](https://s2.ax1x.com/2019/06/14/V5Slm4.png)
 
   2.  点击 “关闭广告” 按钮
 
       会弹出 WPS Office 配置工具窗口，取消所有勾选，点击 “确定” 按钮，会回到卸载 WPS 窗口。
 
-      ![](./assets/20190218091852.png)
+      ![V5S10J.png](https://s2.ax1x.com/2019/06/14/V5S10J.png)
 
   3.  点击 “已完成”，结束。
 

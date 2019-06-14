@@ -21,7 +21,7 @@
 
 - [使用 RAIL 模型评估性能](https://developers.google.com/web/fundamentals/performance/rail?hl=zh-cn)
 
-  ![](./assets/rail.png)
+  ![V5S379.png](https://s2.ax1x.com/2019/06/14/V5S379.png)
 
   - 以用户为中心；最终目标不是让您的网站在任何特定设备上都能运行很快，而是使用户满意。
   - 立即响应用户；在 100 毫秒以内确认用户输入。
