@@ -22,7 +22,7 @@
 
 ### [纯 CSS 图片](https://codepen.io/ivorjetski/pen/xMJoYO)
 
-![bg2019040524.jpg](./assets/bg2019040524.jpg)
+![V5FJtH.jpg](https://s2.ax1x.com/2019/06/14/V5FJtH.jpg)
 
 上面这张图片不是照片，而是纯粹用 CSS 生成的。  
 第一反应是惊艳，然后觉得牛掰，再然后就觉得真是吃饱了...撑的。
