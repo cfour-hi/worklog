@@ -13,4 +13,4 @@
 
 - [x] 吐槽业绩播报版本
 
-  ![业绩播报版本吐槽](./assets/20190307152812.png)
+  ![V5CPOO.png](https://s2.ax1x.com/2019/06/14/V5CPOO.png)

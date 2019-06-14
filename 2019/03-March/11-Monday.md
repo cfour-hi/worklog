@@ -28,7 +28,7 @@
 
 Chrome DevTools Timeline 紫色 layout 部分，右上角如有红色三角标记表示会导致强制同步布局。
 
-![Chrome DevTools Timeline forced reflow](./assets/20190312122912.png)
+![V5CFmD.png](https://s2.ax1x.com/2019/06/14/V5CFmD.png)
 
 ### [Performance Analysis Reference](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
 
@@ -37,10 +37,10 @@ Chrome DevTools Timeline 紫色 layout 部分，右上角如有红色三角标�
 Chrome DevTools > Performance > Capture settings > Disable JavaScript Samples  
  勾选表示不在 Main seciton 显示详细 JavaScript 调用栈，对比如如下：
 
-![js-samples-disabled](./assets/js-samples-disabled.png)  
+![V5CsAJ.png](https://s2.ax1x.com/2019/06/14/V5CsAJ.png)  
  An example of a recording when JS samples are disabled
 
-![js-samples-enabled](./assets/js-samples-enabled.png)  
+![V5CBBF.png](https://s2.ax1x.com/2019/06/14/V5CBBF.png)  
  An example of a recording when JS samples are enabled
 
 #### Search activities
