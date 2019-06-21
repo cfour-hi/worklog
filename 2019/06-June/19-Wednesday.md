@@ -39,7 +39,7 @@
   ```bash
   #!/bin/sh
 
-  # export SENTRY_LOG_LEVEL=debug
+  export SENTRY_LOG_LEVEL=debug
 
   # Assumes you're in a git repository
   export SENTRY_AUTH_TOKEN=adc6cbeffb8d459fa38c131a357517fb18acec76a4d34197a794a780e4c03
@@ -48,8 +48,12 @@
   VERSION=$(sentry-cli releases propose-version)
 
   # Create a release
-  sentry-cli releases new -p marketing-line-fe $VERSION
+  sentry-cli releases new -p micro-frame $VERSION
 
   # Associate commits with the release
   sentry-cli releases set-commits --auto $VERSION
   ```
+
+  报错信息：
+
+  ![ZSMkiq.png](https://s2.ax1x.com/2019/06/21/ZSMkiq.png)
