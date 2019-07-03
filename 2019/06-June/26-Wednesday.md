@@ -1,3 +1,7 @@
+## 计划任务
+
+- [x] CRM v1.21 需求评审
+
 ## 阅读思考
 
 ### [Google Maps 的故事【精华版】](https://mp.weixin.qq.com/s?__biz=MzA3MDMwOTcwMg==&mid=2650006958&idx=1&sn=7f91d56c1ae69bb17b75fdad6ccfaf8a)
