@@ -26,4 +26,5 @@
 
 ### 晚上
 
-优化和完善广告活动落地页相关项目代码
+优化和完善广告活动落地页相关项目代码  
+完成表单验证不通过则屏幕自动滚动到不通过表单项位置，使用 [Element.scrollIntoView()](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView)
