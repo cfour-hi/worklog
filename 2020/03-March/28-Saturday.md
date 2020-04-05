@@ -12,3 +12,12 @@
 ## 一句话记录
 
 【Nuxt】asyncData 只能在页面组件使用
+
+【技术】React/Vue key 的作用：给每个 vnode 一个唯一 id，更快、更准确的找到旧的 vnode。map 相比遍历会更快。
+
+## 阅读思考
+
+### [https://www.brandonsmith.ninja/blog/three-types-of-data](Three Types of Data)
+
+常量、状态、缓存  
+常量是不可变的。状态是可变的，但应该要少。缓存可以理解为计算值，不可直接修改，但会随着某些状态的更改而更改，类似于 Vue 计算属性。
